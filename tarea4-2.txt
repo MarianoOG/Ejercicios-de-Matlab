@@ -1,0 +1,54 @@
+%EJERCICIO 2:
+p1=[5 6]
+
+p1 =
+
+     5     6
+
+p2=[1 2]
+
+p2 =
+
+     1     2
+
+;
+p3=[-3 3];p4=[3 5]
+
+p4 =
+
+     3     5
+
+elipse(p1,p2,p3,p4)
+
+A =
+
+    25    36     5     6
+     1     4     1     2
+     9     9    -3     3
+     9    25     3     5
+
+
+b =
+
+     0
+     0
+     0
+     0
+
+
+x =
+
+     0
+     0
+     0
+     0
+
+
+ans =
+
+     0
+     0
+     0
+     0
+
+uiopen('C:\Users\My Laptop\Documents\MATLAB\elipse.m',1)

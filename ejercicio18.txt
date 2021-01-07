@@ -1,0 +1,74 @@
+%Ejercicio 18:
+idiodo(1)
+{??? Undefined function or method 'idiodo' for
+input arguments of type 'double'.
+} 
+idiodo(1)
+{??? Undefined function or method 'idiodo' for
+input arguments of type 'double'.
+} 
+idiodo(1)
+
+id =
+
+     Inline function:
+     id(io,k,q,tk,vd) = io*(exp(q*vd./(k*tk))-1)
+
+
+tk =
+
+     Inline function:
+     tk(tf) = 5/9*(tf-32)+273.15
+
+
+tf =
+
+     1
+
+{??? Error using ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\funfun\@inline\subsref.m',17,0)">inline.subsref at 17</a>
+Too many inputs to inline function.
+
+Error in ==> <a href="matlab: opentoline('C:\Users\My Laptop\Documents\MATLAB\idiodo.m',6,0)">idiodo at 6</a>
+for c=tk
+} 
+tf=[2+0+1+2+6+4+0+1+0+3+1 75 200 400];
+idiodo(tf)
+{??? Error using ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\funfun\inlineeval.m',15,0)">inlineeval at 15</a>
+Error in inline expression ==>
+io*(exp(q*vd./(k*tk))-1)
+ Matrix dimensions must agree.
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\funfun\@inline\subsref.m',27,0)">inline.subsref at 27</a>
+    INLINE_OUT_ = inlineeval(INLINE_INPUTS_,
+    INLINE_OBJ_.inputExpr, INLINE_OBJ_.expr);
+
+Error in ==> <a href="matlab: opentoline('C:\Users\My Laptop\Documents\MATLAB\idiodo.m',11,0)">idiodo at 11</a>
+    plot(vd,id(io,k,q,tk(tf),vd)),
+} 
+idiodo(tf)
+{??? Error using ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\funfun\inlineeval.m',15,0)">inlineeval at 15</a>
+Error in inline expression ==>
+io*(exp(q*vd./(k*tk))-1)
+ Matrix dimensions must agree.
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\funfun\@inline\subsref.m',27,0)">inline.subsref at 27</a>
+    INLINE_OUT_ = inlineeval(INLINE_INPUTS_,
+    INLINE_OBJ_.inputExpr, INLINE_OBJ_.expr);
+
+Error in ==> <a href="matlab: opentoline('C:\Users\My Laptop\Documents\MATLAB\idiodo.m',11,0)">idiodo at 11</a>
+    plot(vd,id(io,k,q,tk(tf),vd)),grid
+} 
+idiodo(tf)
+{??? Error: <a href="matlab: opentoline('C:\Users\My Laptop\Documents\MATLAB\idiodo.m',11,33)">File: idiodo.m Line: 11 Column: 33</a>
+Unbalanced or unexpected parenthesis or
+bracket.
+} 
+idiodo(tf)
+{??? Error using ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\funfun\@inline\subsref.m',14,0)">inline.subsref at 14</a>
+Not enough inputs to inline function.
+
+Error in ==> <a href="matlab: opentoline('C:\Users\My Laptop\Documents\MATLAB\idiodo.m',11,0)">idiodo at 11</a>
+    plot(vd,id(io,k,q,tk(c)),vd),grid
+} 
+idiodo(tf)
+idiodo(tf)

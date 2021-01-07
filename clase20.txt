@@ -1,0 +1,416 @@
+x=[5 4 6 4 8 7 9 5 4 6 2 3 1 9 4 2 3 5 1];
+whileb(x)
+{??? Error: <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\whileb.m',10,18)">File: whileb.m Line: 10 Column: 18</a>
+Unbalanced or unexpected parenthesis or bracket.
+} 
+whileb(x)
+
+m =
+
+     4
+
+
+m =
+
+     2
+
+
+m =
+
+     1
+
+El numero mayor es:  9.000000 
+El numero menor es:  1.000000 
+whileb(x)
+El numero mayor es:  9.000000 
+El numero menor es:  1.000000 
+whileb([4 8 7 9 5 4 6 8 7 9 5 4 6 8])
+El numero mayor es:  9.000000 
+El numero menor es:  4.000000 
+a=[4 5 6 8 7 4 5; 4 5 4 7 8 9 5 6 4; 4 5 2 3 6 5 4]
+{??? Error using ==> vertcat
+CAT arguments dimensions are not consistent.
+} 
+a=[4 5 6 8 7 4 5; 4 5 4 7 8 9 5 ; 4 5 2 3 6 5 4]
+
+a =
+
+     4     5     6     8     7     4     5
+     4     5     4     7     8     9     5
+     4     5     2     3     6     5     4
+
+whileb(a)
+El numero mayor es:  6.000000 
+El numero menor es:  4.000000 
+whileb(a)
+El numero mayor es:  9.000000 
+El numero menor es:  2.000000 
+El promedio es:  5.238095 
+aritmetica
+Introduzca 2 numeros. 
+Introduzca el primer numero: 5
+Introduzca el segundo numero: 4
+Elija la opcion a calcular. 
+Suma (+)
+Resta (-)
+Producto (*)
+Division (/)
+opcion = 
+
+op =
+
+     []
+
+{??? SWITCH expression must be a scalar or string constant.
+
+Error in ==> <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\aritmetica.m',13,0)">aritmetica at 13</a>
+switch op
+} 
+aritmetica
+Introduzca 2 numeros. 
+Introduzca el primer numero: 4
+Introduzca el segundo numero: 5
+Elija la opcion a calcular. 
+Suma (+)
+Resta (-)
+Producto (*)
+Division (/)
+opcion = *
+??? *
+    |
+{Error: Unexpected MATLAB operator.
+} 
+aritmetica
+{??? Error: <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\aritmetica.m',14,11)">File: aritmetica.m Line: 14 Column: 11</a>
+Expression or statement is incomplete or incorrect.
+} 
+aritmetica
+{??? Error: <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\aritmetica.m',18,11)">File: aritmetica.m Line: 18 Column: 11</a>
+Expression or statement is incomplete or incorrect.
+} 
+4
+
+ans =
+
+     4
+
+aritmetica
+Introduzca 2 numeros. 
+Introduzca el primer numero: 4
+Introduzca el segundo numero: 4
+Elija la opcion a calcular. 
+Suma (+)
+Resta (-)
+Producto (*)
+Division (/)
+opcion = '/'
+
+op =
+
+/
+
+La division de los numeros es: 
+     1
+
+aritmetica
+Introduzca 2 numeros. 
+Introduzca el primer numero: 4
+Introduzca el segundo numero: 4
+Elija la opcion a calcular. 
+Suma (+)
+Resta (-)
+Producto (*)
+Division (/)
+opcion = 5
+aritmetica
+Introduzca 2 numeros. 
+Introduzca el primer numero: 4
+Introduzca el segundo numero: 4
+Elija la opcion a calcular. 
+Suma (+)
+Resta (-)
+Producto (*)
+Division (/)
+opcion = '+'
+La suma de los numeros es: 
+     8
+
+aritmetica
+Introduzca 2 numeros. 
+Introduzca el primer numero: 7
+Introduzca el segundo numero: 4
+Elija la opcion a calcular. 
+Suma (+)
+Resta (-)
+Producto (*)
+Division (/)
+opcion = '-'
+La resta de los numeros es: 
+     3
+
+aritmetica
+Introduzca 2 numeros. 
+Introduzca el primer numero: 7
+Introduzca el segundo numero: 4
+Elija la opcion a calcular. 
+Suma (+)
+Resta (-)
+Producto (*)
+Division (/)
+opcion = '*'
+La multiplicacion de los numeros es: 
+    28
+
+aritmetica
+Introduzca 2 numeros. 
+Introduzca el primer numero: 7
+Introduzca el segundo numero: 4
+Elija la opcion a calcular. 
+Suma (+)
+Resta (-)
+Producto (*)
+Division (/)
+opcion = '/'
+La division de los numeros es: 
+    1.7500
+
+aritmetica
+Introduzca 2 numeros. 
+Introduzca el primer numero: 4
+Introduzca el segundo numero: 7
+Elija la opcion a calcular. 
+Suma (+)
+Resta (-)
+Producto (*)
+Division (/)
+opcion = 'a'
+{??? Undefined function or method 'diso' for input arguments of type 'char'.
+
+Error in ==> <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\aritmetica.m',30,0)">aritmetica at 30</a>
+        diso('Opcion incorrecta.')
+} 
+aritmetica
+Introduzca 2 numeros. 
+Introduzca el primer numero: 7
+Introduzca el segundo numero: 7
+Elija la opcion a calcular. 
+Suma (+)
+Resta (-)
+Producto (*)
+Division (/)
+opcion = 'a'
+Opcion incorrecta.
+leyohm
+De la ley de ohm que quieres calcular: 
+1. Resistencia
+2. Corriente
+3. Voltaje
+Teclee el numero de su opcion y presione enter: 2
+Introduce la resistencia: 2
+Introduce el voltaje: 2
+La corriente es:  1.000000 
+leyohm
+Dato a calcular: 
+1. Resistencia
+2. Corriente
+3. Voltaje
+Teclee el numero de su opcion y presione enter: 5
+Opcion no valida
+leyohm
+Dato a calcular: 
+1. Resistencia
+2. Corriente
+3. Voltaje
+Teclee el numero de su opcion y presione enter: 3
+Introduce la corriente: 7
+Introduce la resistencia: 6
+El voltaje es:  42.000000 
+leyohm
+Dato a calcular: 
+1. Resistencia
+2. Corriente
+3. Voltaje
+Teclee el numero de su opcion y presione enter: 1
+Introduce la corriente: 4
+Introduce el voltaje: 2
+La resistencia es:  0.500000 
+convtemp
+Conversiones de temperatura:
+1. Celsius a Rankine
+2. Farenheit a Celcius
+3. Celcius a Kelvin
+4. Farenheit a Rankine
+5. Celcius a Farenheit
+Teclee el numero de su opcion y presione enter: 2
+2. Farenheit a Celcius
+Introduce la temperatura: 32
+La temperatura en Celcius es:  89.600000 
+convtemp
+Conversiones de temperatura:
+1. Celsius a Rankine
+2. Farenheit a Celcius
+3. Celcius a Kelvin
+4. Farenheit a Rankine
+5. Celcius a Farenheit
+Teclee el numero de su opcion y presione enter: 2
+2. Farenheit a Celcius
+Introduce la temperatura: 32
+La temperatura en Celcius es:  0.000000 
+convtemp
+Conversiones de temperatura:
+1. Celsius a Rankine
+2. Farenheit a Celcius
+3. Celcius a Kelvin
+4. Farenheit a Rankine
+5. Celcius a Farenheit
+Teclee el numero de su opcion y presione enter: 5
+5. Celcius a Farenheit
+Introduce la temperatura: 0
+La temperatura en Farenheit es:  32.000000 
+convtemp
+Conversiones de temperatura:
+1. Celsius a Rankine
+2. Farenheit a Celcius
+3. Celcius a Kelvin
+4. Farenheit a Rankine
+5. Celcius a Farenheit
+Teclee el numero de su opcion y presione enter: 3
+3. Celcius a Kelvin
+Introduce la temperatura: 0
+La temperatura en Kelvin es:  273.150000 
+convtemp
+Conversiones de temperatura:
+1. Celsius a Rankine
+2. Farenheit a Celcius
+3. Celcius a Kelvin
+4. Farenheit a Rankine
+5. Celcius a Farenheit
+Teclee el numero de su opcion y presione enter: 1
+1. Celsius a Rankine
+Introduce la temperatura: 5
+La temperatura en Rankine es:  5.000000 
+spar=0;simpar=0;i=1;
+while(1)
+simpar = simpar+i;i=i+1;
+spar=spar+i;i=i+1;
+if i>200,break,end
+end
+simpar
+
+simpar =
+
+       10000
+
+spar
+
+spar =
+
+       10100
+
+R=1;
+while R>0
+R=input('Introduce el radio: ');
+if R>0
+area=pi*R^2;
+circunferencia=2*pi*R;
+fprintf('area=%f;circunferencia=%f \n',area,circunferencia);
+end
+end
+Introduce el radio: 2
+area=12.566371;circunferencia=12.566371 
+Introduce el radio: 4
+area=50.265482;circunferencia=25.132741 
+Introduce el radio: 5
+area=78.539816;circunferencia=31.415927 
+Introduce el radio: 6
+area=113.097336;circunferencia=37.699112 
+Introduce el radio: 4
+area=50.265482;circunferencia=25.132741 
+Introduce el radio: 1
+area=3.141593;circunferencia=6.283185 
+Introduce el radio: 2
+area=12.566371;circunferencia=12.566371 
+Introduce el radio: 8
+area=201.061930;circunferencia=50.265482 
+Introduce el radio: 4
+area=50.265482;circunferencia=25.132741 
+Introduce el radio: 6
+area=113.097336;circunferencia=37.699112 
+Introduce el radio: 5
+area=78.539816;circunferencia=31.415927 
+Introduce el radio: 1
+area=3.141593;circunferencia=6.283185 
+Introduce el radio: 0
+3
+
+ans =
+
+     3
+
+vecdinamico
+Introduce un valor positivo: 5
+Introduce un valor positivo: 5
+Introduce un valor positivo: 5
+Introduce un valor positivo: 2
+Introduce un valor positivo: 1
+Introduce un valor positivo: 3
+Introduce un valor positivo: 5
+Introduce un valor positivo: 4
+Introduce un valor positivo: 8
+Introduce un valor positivo: 9
+Introduce un valor positivo: -1
+
+ans =
+
+     5
+     5
+     5
+     2
+     1
+     3
+     5
+     4
+     8
+     9
+    -1
+
+vecdinamico
+Introduce un valor positivo: 2
+Introduce un valor positivo: 5
+
+ans =
+
+     2
+
+6
+
+ans =
+
+     6
+
+4
+
+ans =
+
+     4
+
+vecdinamico
+Introduce un valor positivo: 4
+Introduce un valor positivo: 5
+
+ans =
+
+     4
+
+vecdinamico
+Introduce un valor positivo: 4
+Introduce un valor positivo: 5
+Introduce un valor positivo: 6
+Introduce un valor positivo: -7
+
+ans =
+
+     4
+     5
+     6
+

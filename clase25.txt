@@ -1,0 +1,572 @@
+syms x
+f1=x/(x^4+6*x^2+5)
+ 
+f1 =
+ 
+x/(x^4 + 6*x^2 + 5)
+ 
+int(f1)
+ 
+ans =
+ 
+-(atan((((3*x^2)/2 + 5/2)*i)/x^2)*i)/4
+ 
+int('(5*x^2+20*x+6)/(x^3+2*x^2+x)','x')
+ 
+ans =
+ 
+6*log(x) - log(x + 1) - 9/(x + 1)
+ 
+int('exp(x)*cos(x)','x')
+ 
+ans =
+ 
+(exp(x)*(cos(x) + sin(x)))/2
+ 
+syms a b
+int('exp(a*x)*sin(b*x)',x)
+ 
+ans =
+ 
+-(exp(a*x)*(b*cos(b*x) - a*sin(b*x)))/(a^2 + b^2)
+ 
+pretty(ans)
+ 
+    exp(a x) (b cos(b x) - a sin(b x)) 
+  - ---------------------------------- 
+                  2    2 
+                 a  + b
+syms y z
+int(int(1+2*x+2*y,y,0,1),x,0,2)
+ 
+ans =
+ 
+8
+ 
+int(int(int(x+y+z,x,0,1),y,0,2)z,0,3)
+??? int(int(int(x+y+z,x,0,1),y,0,2)z,0,3)
+                                   |
+{Error: Unexpected MATLAB expression.
+} 
+int(int(int(x+y+z,x,0,1),y,0,2),z,0,3)
+ 
+ans =
+ 
+18
+ 
+syms t a b
+int(sin(x),t,exp(t))
+ 
+ans =
+ 
+cos(t) - cos(exp(t))
+ 
+int(sin(x),t,exp(t))
+ 
+ans =
+ 
+cos(t) - cos(exp(t))
+ 
+int(x^2,a,b)
+ 
+ans =
+ 
+b^3/3 - a^3/3
+ 
+pretty(ans)
+ 
+   3    3 
+  b    a 
+  -- - -- 
+  3    3
+int(1/(exp(x^2)*(x^2+x+1)),-inf,inf)
+{Warning: Explicit integral could not be found. } 
+ 
+ans =
+ 
+int(1/(exp(x^2)*(x^2 + x + 1)), x = -Inf..Inf)
+ 
+int(1/(exp(x^2)*(x^2+x+1)),0,1)
+{Warning: Explicit integral could not be found. } 
+ 
+ans =
+ 
+int(1/(exp(x^2)*(x^2 + x + 1)), x = 0..1)
+ 
+solve(x^2+x+1)
+ 
+ans =
+ 
+ - 1/2 - (3^(1/2)*i)/2
+ - 1/2 + (3^(1/2)*i)/2
+ 
+[k p]=solve(x^2+x+1)
+{??? Error using ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\solve.m',132,0)">solve>assignOutputs at 132</a>
+1 variables does not match 2 outputs.
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\solve.m',87,0)">solve at 87</a>
+varargout = assignOutputs(nargout,R,symvars);
+} 
+int(1/(exp(x^2)*(x^2+x+1)),-1/2-(3^(1/2)*i)/2,1/2-(3^(1/2)*i)/2)
+{Warning: Explicit integral could not be found. } 
+ 
+ans =
+ 
+int(1/(exp((1/2 - y + (3^(1/2)*i)/2)^2)*(y + (1/2 - y + (3^(1/2)*i)/2)^2 + 1/2 - (3^(1/2)*i)/2)), y = 0..1)
+ 
+int(1/(exp(x^2)*(x^2+x+1)),-1/2-(3^(1/2)*i)/4,1/2-(3^(1/2)*i)/4)
+{Warning: Explicit integral could not be found. } 
+ 
+ans =
+ 
+int(1/(exp((1/2 - y + (3^(1/2)*i)/4)^2)*(y + (1/2 - y + (3^(1/2)*i)/4)^2 + 1/2 - (3^(1/2)*i)/4)), y = 0..1)
+ 
+dsolve('Dy+2*y=12')
+ 
+ans =
+ 
+C5/exp(2*t) + 6
+ 
+dsolve('Dy=c^2*y')
+ 
+ans =
+ 
+C7*exp(c^2*t)
+ 
+dsolve('D2y=c^2*y')
+ 
+ans =
+ 
+C10*exp(c*t) + C9/exp(c*t)
+ 
+y=dsolve('(Dy)^2+y^2=1','y(0)=0')
+ 
+y =
+ 
+   cosh((pi*i)/2 + t*i)
+ cosh(- (pi*i)/2 + t*i)
+   cosh((pi*i)/2 - t*i)
+ cosh(- (pi*i)/2 - t*i)
+ 
+Dy
+{??? Undefined function or variable 'Dy'.
+} 
+diff(y)
+ 
+ans =
+ 
+    sinh((pi*i)/2 + t*i)*i
+  sinh(- (pi*i)/2 + t*i)*i
+   -sinh((pi*i)/2 - t*i)*i
+ -sinh(- (pi*i)/2 - t*i)*i
+ 
+diff(y)^2+y^2
+{??? Error using ==> mupadmex
+Error in MuPAD command: not a square matrix
+[(Dom::Matrix(Dom::ExpressionField()))::_power]
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',198,0)">sym.sym>sym.mpower at 198</a>
+            B = mupadmex('mllib::mpower',A.s,p.s);
+} 
+(diff(y))^2+y^2
+{??? Error using ==> mupadmex
+Error in MuPAD command: not a square matrix
+[(Dom::Matrix(Dom::ExpressionField()))::_power]
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',198,0)">sym.sym>sym.mpower at 198</a>
+            B = mupadmex('mllib::mpower',A.s,p.s);
+} 
+y=cosh((pi*i)/2+t*i)
+ 
+y =
+ 
+cosh((pi*i)/2 + t*i)
+ 
+diff(y)^2+y^2
+ 
+ans =
+ 
+cosh((pi*i)/2 + t*i)^2 - sinh(1/2*i*pi + i*t)^2
+ 
+simplify(diff(y)^2+y^2)
+ 
+ans =
+ 
+1
+ 
+dsolve('2*Dx+4*Dy=cos(t),4*Dx-3*Dy=sin(t)','t')
+
+ans = 
+
+    y: [1x1 sym]
+    x: [1x1 sym]
+
+[p o]= dsolve('2*Dx+4*Dy=cos(t),4*Dx-3*Dy=sin(t)','t')
+ 
+p =
+ 
+C23 - (2*cos(t))/11 + (3*sin(t))/22
+ 
+ 
+o =
+ 
+C24 + cos(t)/11 + (2*sin(t))/11
+ 
+y= dsolve('2*Dx+4*Dy=cos(t),4*Dx-3*Dy=sin(t)','t')
+
+y = 
+
+    y: [1x1 sym]
+    x: [1x1 sym]
+
+y.y(1)
+ 
+ans =
+ 
+C24 + cos(t)/11 + (2*sin(t))/11
+ 
+y.x(1)
+ 
+ans =
+ 
+C23 - (2*cos(t))/11 + (3*sin(t))/22
+ 
+y.x(2)
+{??? Error using ==> mupadmex
+Error in MuPAD command: Index exceeds matrix dimensions.
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',1366,0)">sym.sym>sym.subsref at 1366</a>
+            B = mupadmex('mllib::subsref',A.s,inds{:});
+} 
+syms y
+dsolve(D4y=y,y(pi/2)=1,Dy(pi/2)=0,D2y(pi/2)=-1,D3y(pi/2)=0)
+??? dsolve(D4y=y,y(pi/2)=1,Dy(pi/2)=0,D2y(pi/2)=-1,D3y(pi/2)=0)
+              |
+{Error: The expression to the left of the equals sign is not a valid target for an
+assignment.
+} 
+dsolve('D4y=y,y(pi/2)=1,Dy(pi/2)=0,D2y(pi/2)=-1,D3y(pi/2)=0')
+ 
+ans =
+ 
+sin(t)
+ 
+[x1sol x2sol x3sol]=dsolve('Dx1=-x1+x2+x3','Dx2=-2*x2+x3','Dx3=-3*x3','x1(0)=1','x2(0)=2','x3(0)=3','t')
+ 
+x1sol =
+ 
+6/exp(t) - 5/exp(2*t)
+ 
+ 
+x2sol =
+ 
+5/exp(2*t) - 3/exp(3*t)
+ 
+ 
+x3sol =
+ 
+3/exp(3*t)
+ 
+dsolve('D4y=y','y(pi/2)=1','Dy(pi/2)=0','D2y(pi/2)=-1','D3y(pi/2)=0')
+ 
+ans =
+ 
+sin(t)
+ 
+x1=inline(vectorize(x1sol),'t')
+
+x1 =
+
+     Inline function:
+     x1(t) = 6./exp(t) - 5./exp(2.*t)
+
+x2=inline(vectorize(x2sol),'t')
+
+x2 =
+
+     Inline function:
+     x2(t) = 5./exp(2.*t) - 3./exp(3.*t)
+
+x3=inline(vectorize(x3sol),'t')
+
+x3 =
+
+     Inline function:
+     x3(t) = 3./exp(3.*t)
+
+[x1sol x2sol x3sol]=dsolve('Dx1=-x1+x2+x3','Dx2=-2*x2+x3','Dx3=-3*x3','t')
+ 
+x1sol =
+ 
+C35/exp(t) - C33/exp(2*t)
+ 
+ 
+x2sol =
+ 
+C33/exp(2*t) - C34/exp(3*t)
+ 
+ 
+x3sol =
+ 
+C34/exp(3*t)
+ 
+x1=inline(vectorize(x1sol),'t')
+
+x1 =
+
+     Inline function:
+     x1(t) = C35./exp(t) - C33./exp(2.*t)
+
+x2=inline(vectorize(x2sol),'t')
+
+x2 =
+
+     Inline function:
+     x2(t) = C33./exp(2.*t) - C34./exp(3.*t)
+
+x3=inline(vectorize(x3sol),'t')
+
+x3 =
+
+     Inline function:
+     x3(t) = C34./exp(3.*t)
+
+close all;axes;hold on
+syms t
+ezplot(x1(t),[0 2.5])
+{??? Error using ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\funfun\inlineeval.m',15,0)">inlineeval at 15</a>
+Error in inline expression ==> C35./exp(t) - C33./exp(2.*t)
+ Undefined function or variable 'C35'.
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\funfun\@inline\subsref.m',27,0)">inline.subsref at 27</a>
+    INLINE_OUT_ = inlineeval(INLINE_INPUTS_, INLINE_OBJ_.inputExpr,
+    INLINE_OBJ_.expr);
+} 
+[x1sol x2sol x3sol]=dsolve('Dx1=-x1+x2+x3','Dx2=-2*x2+x3','Dx3=-3*x3','x1(0)=1','x2(0)=2','x3(0)=3','t')
+ 
+x1sol =
+ 
+6/exp(t) - 5/exp(2*t)
+ 
+ 
+x2sol =
+ 
+5/exp(2*t) - 3/exp(3*t)
+ 
+ 
+x3sol =
+ 
+3/exp(3*t)
+ 
+x1=inline(vectorize(x1sol),'t')
+
+x1 =
+
+     Inline function:
+     x1(t) = 6./exp(t) - 5./exp(2.*t)
+
+x2=inline(vectorize(x2sol),'t')
+
+x2 =
+
+     Inline function:
+     x2(t) = 5./exp(2.*t) - 3./exp(3.*t)
+
+x3=inline(vectorize(x3sol),'t')
+
+x3 =
+
+     Inline function:
+     x3(t) = 3./exp(3.*t)
+
+ezplot(x1(t),[0 2.5])
+hold on,ezplot(x2(t),[0 2.5])
+ezplot(x3(t),[0 2.5])
+axes
+ezplot(x1(t),[0 2.5])
+hold on,ezplot(x2(t),[0 2.5])
+ezplot(x3(t),[0 2.5])
+[x1sol x2sol x3sol]=dsolve('Dx1=-x1+x2+x3','Dx2=-2*x2+x3','Dx3=-3*x3','t')
+ 
+x1sol =
+ 
+C35/exp(t) - C33/exp(2*t)
+ 
+ 
+x2sol =
+ 
+C33/exp(2*t) - C34/exp(3*t)
+ 
+ 
+x3sol =
+ 
+C34/exp(3*t)
+ 
+x1=inline(vectorize(x1sol),'t')
+
+x1 =
+
+     Inline function:
+     x1(t) = C35./exp(t) - C33./exp(2.*t)
+
+x2=inline(vectorize(x2sol),'t')
+
+x2 =
+
+     Inline function:
+     x2(t) = C33./exp(2.*t) - C34./exp(3.*t)
+
+x3=inline(vectorize(x3sol),'t')
+
+x3 =
+
+     Inline function:
+     x3(t) = C34./exp(3.*t)
+
+ezplot(x1(t),[0 2.5])
+{??? Error using ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\funfun\inlineeval.m',15,0)">inlineeval at 15</a>
+Error in inline expression ==> C35./exp(t) - C33./exp(2.*t)
+ Undefined function or variable 'C35'.
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\funfun\@inline\subsref.m',27,0)">inline.subsref at 27</a>
+    INLINE_OUT_ = inlineeval(INLINE_INPUTS_, INLINE_OBJ_.inputExpr,
+    INLINE_OBJ_.expr);
+} 
+[x1sol x2sol x3sol]=dsolve('Dx1=-x1+x2+x3,Dx2=-2x2+x3,Dx3=-3x3','t')
+{??? Error using ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',2408,0)">sym.sym>expression2ref at 2408</a>
+Error: Unexpected 'identifier' [line 1, col 30]
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',2378,0)">sym.sym>char2ref at 2378</a>
+    s = expression2ref(x);
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',2147,0)">sym.sym>tomupad at 2147</a>
+        S = char2ref(x);
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',102,0)">sym.sym>sym.sym at 102</a>
+                S.s = tomupad(x,'');
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\dsolve.m',189,0)">dsolve>mupadDsolve at 189</a>
+sys = sym(sys_str);
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\dsolve.m',97,0)">dsolve at 97</a>
+[R,vars] = mupadDsolve(ignoreConstraints,varargin{1:narg});
+} 
+[x1sol x2sol x3sol]=dsolve('Dx1=-x1+x2+x3,Dx2=-2x2+x3,Dx3=-3x3,t')
+{??? Error using ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',2408,0)">sym.sym>expression2ref at 2408</a>
+Error: Unexpected 'identifier' [line 1, col 30]
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',2378,0)">sym.sym>char2ref at 2378</a>
+    s = expression2ref(x);
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',2147,0)">sym.sym>tomupad at 2147</a>
+        S = char2ref(x);
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',102,0)">sym.sym>sym.sym at 102</a>
+                S.s = tomupad(x,'');
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\dsolve.m',189,0)">dsolve>mupadDsolve at 189</a>
+sys = sym(sys_str);
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\dsolve.m',97,0)">dsolve at 97</a>
+[R,vars] = mupadDsolve(ignoreConstraints,varargin{1:narg});
+} 
+[x1sol x2sol x3sol]=dsolve('Dx1=-x1+x2+x3,Dx2=-2x2+x3,Dx3=-3x3')
+{??? Error using ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',2408,0)">sym.sym>expression2ref at 2408</a>
+Error: Unexpected 'identifier' [line 1, col 30]
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',2378,0)">sym.sym>char2ref at 2378</a>
+    s = expression2ref(x);
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',2147,0)">sym.sym>tomupad at 2147</a>
+        S = char2ref(x);
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',102,0)">sym.sym>sym.sym at 102</a>
+                S.s = tomupad(x,'');
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\dsolve.m',189,0)">dsolve>mupadDsolve at 189</a>
+sys = sym(sys_str);
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\dsolve.m',97,0)">dsolve at 97</a>
+[R,vars] = mupadDsolve(ignoreConstraints,varargin{1:narg});
+} 
+[x1sol x2sol x3sol]=dsolve('Dx1=-x1+x2+x3','Dx2=-2x2+x3','Dx3=-3x3')
+{??? Error using ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',2408,0)">sym.sym>expression2ref at 2408</a>
+Error: Unexpected 'identifier' [line 1, col 30]
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',2378,0)">sym.sym>char2ref at 2378</a>
+    s = expression2ref(x);
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',2147,0)">sym.sym>tomupad at 2147</a>
+        S = char2ref(x);
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',102,0)">sym.sym>sym.sym at 102</a>
+                S.s = tomupad(x,'');
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\dsolve.m',189,0)">dsolve>mupadDsolve at 189</a>
+sys = sym(sys_str);
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\dsolve.m',97,0)">dsolve at 97</a>
+[R,vars] = mupadDsolve(ignoreConstraints,varargin{1:narg});
+} 
+[x1sol x2sol x3sol]=dsolve('Dx1=-x1+x2+x3','Dx2=-2x2+x3','Dx3=-3x3','t')
+{??? Error using ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',2408,0)">sym.sym>expression2ref at 2408</a>
+Error: Unexpected 'identifier' [line 1, col 30]
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',2378,0)">sym.sym>char2ref at 2378</a>
+    s = expression2ref(x);
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',2147,0)">sym.sym>tomupad at 2147</a>
+        S = char2ref(x);
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',102,0)">sym.sym>sym.sym at 102</a>
+                S.s = tomupad(x,'');
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\dsolve.m',189,0)">dsolve>mupadDsolve at 189</a>
+sys = sym(sys_str);
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\dsolve.m',97,0)">dsolve at 97</a>
+[R,vars] = mupadDsolve(ignoreConstraints,varargin{1:narg});
+} 
+[x1sol x2sol x3sol]=dsolve('Dx1=-x1+x2+x3','Dx2=-2*x2+x3','Dx3=-3*x3','t')
+ 
+x1sol =
+ 
+C35/exp(t) - C33/exp(2*t)
+ 
+ 
+x2sol =
+ 
+C33/exp(2*t) - C34/exp(3*t)
+ 
+ 
+x3sol =
+ 
+C34/exp(3*t)
+ 
+[x1sol x2sol x3sol]=dsolve('Dx1=-x1+x2+x3','Dx2=-2*x2+x3','Dx3=-3*x3')
+ 
+x1sol =
+ 
+C35/exp(t) - C33/exp(2*t)
+ 
+ 
+x2sol =
+ 
+C33/exp(2*t) - C34/exp(3*t)
+ 
+ 
+x3sol =
+ 
+C34/exp(3*t)
+ 
+builtin('cd','G:\Documents\Herramientas');
+glico
+{??? Undefined function or method 'xlable' for input arguments of type 'char'.
+
+Error in ==> <a href="matlab: opentoline('G:\Documents\Herramientas\glico.m',23,0)">glico at 23</a>
+xlable('ATP (s_1)');ylabel('ADP (s_2)')} 
+ opentoline('G:\Documents\Herramientas\glico.m',23,0)
+glico
+clear all,clc
+glico
+diary off

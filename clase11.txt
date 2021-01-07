@@ -1,0 +1,700 @@
+x=0:0.4:6;y=[3 2.1 1.3 0.5 0 -0.2 0 0.3 1.1 2 2.9 3.5 4 4.2 4 3.5];modelo1(x,y)
+
+a0 =
+
+   1.989380184681835
+
+
+a1 =
+
+   0.992023151607412
+
+
+b1 =
+
+  -1.961964222419934
+
+
+ans =
+
+   1.989380184681835
+
+plot(x,y,'d',x,y,'b'),grid
+plot(x,y,'dg',x,y,'b'),grid
+uiopen('C:\Users\Alumnos\Documents\MATLAB\modelo1.m',1)
+n=length(x);
+A=[n sum(cos(x)) sum(sin(x));
+sum(cos(x)) sum(cos(x).^2) sum(sin(x).*cos(x));
+sum(sin(x)) sum(sin(x).*cos(x)) sum(sin(x).^2)];
+d=[sum(y) sum(y.*cos(x)) sum(y.*sin(x))]';
+t=A\d;
+a0=t(1),a1=t(2),b1=t(3)
+
+a0 =
+
+   1.989380184681835
+
+
+a1 =
+
+   0.992023151607412
+
+
+b1 =
+
+  -1.961964222419934
+
+z=n.*a0 + a1.*cos(x) + b1.*sin(x);
+subplot(1,2,1);plot(x,y,'dg',x,y,'b');subplot(1,2,2);plot(x,y,'sg',x,y,'r')
+subplot(1,2,1);plot(x,y,'dg',x,y,'b');subplot(1,2,2);plot(x,y,'sg',x,z,'r')
+z=a0 + a1.*cos(x) + b1.*sin(x);
+subplot(1,2,1);plot(x,y,'dg',x,y,'b');subplot(1,2,2);plot(x,z,'sg',x,z,'r')
+subplot(1,2,1);plot(x,y,'dg',x,y,'b')
+subplot(1,2,2);plot(x,z,'sg',x,z,'r')
+clc
+clear all
+dducto(1900 98 78.8 8500 0.011 0.3 0.1 0.02 2 0.15 0.4)
+??? dducto(1900 98 78.8 8500 0.011 0.3 0.1 0.02 2 0.15 0.4)
+                |
+{Error: Unexpected MATLAB expression.
+} 
+dducto(1900,98,78.8,8500,0.011,0.3,0.1,0.02,2,0.15,0.4)
+{??? Error: <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\dducto.m',3,37)">File: dducto.m Line: 3
+Column: 37</a>
+Unbalanced or unexpected parenthesis or
+bracket.
+} 
+dducto(1900,98,78.8,8500,0.011,0.3,0.1,0.02,2,0.15,0.4)
+
+di =
+
+   0.815738950331737
+
+
+ans =
+
+   0.815738950331737
+
+dducto(19000,98,78.8,8500,0.011,0.3,0.1,0.02,2,0.15,0.4)
+
+di =
+
+   2.288501491048078
+
+
+ans =
+
+   2.288501491048078
+
+dducto(19000,98,78.8,8500,0.011,0.3,0.1,0.02,2,0.15,0.4)
+
+di =
+
+   2.288501491048078
+
+
+ans =
+
+   2.288501491048078
+
+[a0 a1 b1]=modelo1(4,5,6)
+{??? Error using ==> modelo1
+Too many input arguments.
+} 
+[a0 a1 b1]=modelo1(4,5)
+{Warning: Matrix is singular to
+working precision.} 
+> In <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\modelo1.m',10,1)">modelo1 at 10</a>
+
+a0 =
+
+   NaN
+
+
+a1 =
+
+   NaN
+
+
+b1 =
+
+   NaN
+
+
+a0 =
+
+   NaN
+
+
+a1 =
+
+   NaN
+
+
+b1 =
+
+   NaN
+
+clear all,clc
+circ3pt(2,-2,-1,4,4,6)
+
+A =
+
+  Columns 1 through 2
+
+       2             -2       
+      -1              4       
+       4              6       
+
+  Column 3
+
+       1       
+       1       
+       1       
+
+{??? Error using ==> mldivide
+Matrix dimensions must agree.
+
+Error in ==> <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\circ3pt.m',8,0)">circ3pt at 8</a>
+s=A\b;
+} 
+circ3pt(2,-2,-1,4,4,6)
+{??? Error using ==> mldivide
+Matrix dimensions must agree.
+
+Error in ==> <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\circ3pt.m',6,0)">circ3pt at 6</a>
+s=A\b;
+} 
+circ3pt(2,-2,-1,4,4,6)
+
+D =
+
+     -16/3     
+
+
+E =
+
+     -25/6     
+
+
+F =
+
+     -17/3     
+
+[D E F]=circ3pt(2,-2,-1,4,4,6)
+{??? Error using ==> circ3pt
+Too many output arguments.
+} 
+[D E F]=circ3pt(2,-2,-1,4,4,6)
+
+D =
+
+     -16/3     
+
+
+E =
+
+     -25/6     
+
+
+F =
+
+     -17/3     
+
+
+D =
+
+     -16/3     
+
+
+E =
+
+     -25/6     
+
+
+F =
+
+     -17/3     
+
+A=[2 -2];B=[-1 4];C=[4 6]; [D E F]=circvec(A,B,C)
+
+D =
+
+     -31/6     
+
+
+E =
+
+     -55/12    
+
+
+F =
+
+     -23/6     
+
+
+D =
+
+     -31/6     
+
+
+E =
+
+     -55/12    
+
+
+F =
+
+     -23/6     
+
+A=[2 -2];B=[-1 4];C=[4 6]; [D E F]=circvec(A,B,C)
+
+A =
+
+  Columns 1 through 2
+
+       2             -2       
+      -1              4       
+       4              6       
+
+  Column 3
+
+       1       
+       1       
+       1       
+
+
+b =
+
+      -5       
+     -17       
+     -52       
+
+
+s =
+
+     -31/6     
+     -55/12    
+     -23/6     
+
+
+D =
+
+     -31/6     
+
+
+E =
+
+     -55/12    
+
+
+F =
+
+     -23/6     
+
+
+D =
+
+     -31/6     
+
+
+E =
+
+     -55/12    
+
+
+F =
+
+     -23/6     
+
+clear all
+A=[2 -2];B=[-1 4];C=[4 6]; [D E F]=circvec(A,B,C)
+
+A =
+
+  Columns 1 through 2
+
+       2             -2       
+      -1              4       
+       4              6       
+
+  Column 3
+
+       1       
+       1       
+       1       
+
+
+b =
+
+      -5       
+     -17       
+     -52       
+
+
+s =
+
+     -31/6     
+     -55/12    
+     -23/6     
+
+
+D =
+
+     -31/6     
+
+
+E =
+
+     -55/12    
+
+
+F =
+
+     -23/6     
+
+
+D =
+
+     -31/6     
+
+
+E =
+
+     -55/12    
+
+
+F =
+
+     -23/6     
+
+circ3pt(2,-2,-1,4,4,6)
+
+D =
+
+     -16/3     
+
+
+E =
+
+     -25/6     
+
+
+F =
+
+     -17/3     
+
+
+ans =
+
+     -16/3     
+
+circ3pt(2,-2,-1,4,4,6)
+
+A =
+
+  Columns 1 through 2
+
+       2             -2       
+      -1              4       
+       4              6       
+
+  Column 3
+
+       1       
+       1       
+       1       
+
+
+b =
+
+      -8       
+     -17       
+     -52       
+
+
+s =
+
+     -16/3     
+     -25/6     
+     -17/3     
+
+
+D =
+
+     -16/3     
+
+
+E =
+
+     -25/6     
+
+
+F =
+
+     -17/3     
+
+
+ans =
+
+     -16/3     
+
+A=[2 -2];B=[-1 4];C=[4 6]; [D E F]=circvec(A,B,C)
+
+A =
+
+       2             -2              1       
+      -1              4              1       
+       4              6              1       
+
+
+b =
+
+      -5       
+     -17       
+     -52       
+
+
+s =
+
+     -31/6     
+     -55/12    
+     -23/6     
+
+
+D =
+
+     -31/6     
+
+
+E =
+
+     -55/12    
+
+
+F =
+
+     -23/6     
+
+
+D =
+
+     -31/6     
+
+
+E =
+
+     -55/12    
+
+
+F =
+
+     -23/6     
+
+A=[2 -2];B=[-1 4];C=[4 6]; [D E F]=circvec(A,B,C)
+
+A =
+
+       2             -2              1       
+      -1              4              1       
+       4              6              1       
+
+
+b =
+
+      -8       
+     -17       
+     -52       
+
+
+s =
+
+     -16/3     
+     -25/6     
+     -17/3     
+
+
+D =
+
+     -16/3     
+
+
+E =
+
+     -25/6     
+
+
+F =
+
+     -17/3     
+
+
+D =
+
+     -16/3     
+
+
+E =
+
+     -25/6     
+
+
+F =
+
+     -17/3     
+
+A
+
+A =
+
+       2             -2       
+
+circ3pt(2,-2,-1,4,4,6)
+
+D =
+
+     -16/3     
+
+
+E =
+
+     -25/6     
+
+
+F =
+
+     -17/3     
+
+
+ans =
+
+     -16/3     
+
+A=[2 -2];B=[-1 4];C=[4 6]; [D E F]=circvec(A,B,C)
+
+D =
+
+     -16/3     
+
+
+E =
+
+     -25/6     
+
+
+F =
+
+     -17/3     
+
+
+D =
+
+     -16/3     
+
+
+E =
+
+     -25/6     
+
+
+F =
+
+     -17/3     
+
+clear all,clc
+uiopen('C:\Users\Alumnos\Documents\MATLAB\circ3pt.m',1)
+A=[2 -2];B=[-1 4];C=[4 6]; [D E F]=circvec(A,B,C)
+
+D =
+
+     -16/3     
+
+
+E =
+
+     -25/6     
+
+
+F =
+
+     -17/3     
+
+
+D =
+
+     -16/3     
+
+
+E =
+
+     -25/6     
+
+
+F =
+
+     -17/3     
+
+clear all
+A=[2 -2];B=[-1 4];C=[4 6]; circvec(A,B,C)
+
+D =
+
+     -16/3     
+
+
+E =
+
+     -25/6     
+
+
+F =
+
+     -17/3     
+
+
+ans =
+
+     -16/3     
+
+circ3pt(2,-2,-1,4,4,6)
+
+D =
+
+     -16/3     
+
+
+E =
+
+     -25/6     
+
+
+F =
+
+     -17/3     
+
+a=circ3pt(2,-2,-1,4,4,6)
+{??? Error using ==> circ3pt
+Too many output arguments.
+} 
+a=circ3pt(2,-2,-1,4,4,6)
+
+D =
+
+     -16/3     
+
+
+E =
+
+     -25/6     
+
+
+F =
+
+     -17/3     
+
+
+a =
+
+     -16/3     
+
+clear all,clc

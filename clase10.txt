@@ -1,0 +1,283 @@
+y=RLC1(120,0.15e-3,0.26,120)
+Error in ==> <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\RLC1.m',3,1)">RLC1 at 3</a>
+clc
+
+{??? Output argument "y" (and maybe others) not assigned during call to
+"C:\Users\Alumnos\Documents\MATLAB\RLC1.m>RLC1".
+} 
+run('C:\Users\Alumnos\Documents\MATLAB\RLC1.m')
+{??? Input argument "C" is undefined.
+
+Error in ==> <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\RLC1.m',4,0)">RLC1 at 4</a>
+C=C*1e-9;
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\lang\run.m',57,0)">run at 57</a>
+          evalin('caller', [s ';']);
+} 
+run('C:\Users\Alumnos\Documents\MATLAB\RLC2.m')
+Ingresa la resistencia del circuito: 120
+
+R =
+
+   120
+
+Ingresa la inductancia del circuito: 0.15e-3
+
+L =
+
+  1.5000e-004
+
+Ingresa la capacitancia del circuito: 0.26
+
+C =
+
+    0.2600
+
+Ingresa el voltaje del circuito: 120
+
+vs =
+
+   120
+
+
+viga(25,200e9,6e3,350e-6)
+{??? Error: <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\viga.m',5,45)">File: viga.m Line: 5 Column: 45</a>
+Expression or statement is incorrect--possibly unbalanced (, {, or [.
+} 
+viga(25,200e9,6e3,350e-6)
+{??? Error: <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\viga.m',5,45)">File: viga.m Line: 5 Column: 45</a>
+Expression or statement is incorrect--possibly unbalanced (, {, or [.
+} 
+viga(25,200e9,6e3,350e-6)
+{??? Error: <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\viga.m',6,78)">File: viga.m Line: 6 Column: 78</a>
+Unbalanced or unexpected parenthesis or bracket.
+} 
+viga(25,200e9,6e3,350e-6)
+
+x =
+
+  Columns 1 through 7
+
+         0    0.2525    0.5051    0.7576    1.0101    1.2626    1.5152
+
+  Columns 8 through 14
+
+    1.7677    2.0202    2.2727    2.5253    2.7778    3.0303    3.2828
+
+  Columns 15 through 21
+
+    3.5354    3.7879    4.0404    4.2929    4.5455    4.7980    5.0505
+
+  Columns 22 through 28
+
+    5.3030    5.5556    5.8081    6.0606    6.3131    6.5657    6.8182
+
+  Columns 29 through 35
+
+    7.0707    7.3232    7.5758    7.8283    8.0808    8.3333    8.5859
+
+  Columns 36 through 42
+
+    8.8384    9.0909    9.3434    9.5960    9.8485   10.1010   10.3535
+
+  Columns 43 through 49
+
+   10.6061   10.8586   11.1111   11.3636   11.6162   11.8687   12.1212
+
+  Columns 50 through 56
+
+   12.3737   12.6263   12.8788   13.1313   13.3838   13.6364   13.8889
+
+  Columns 57 through 63
+
+   14.1414   14.3939   14.6465   14.8990   15.1515   15.4040   15.6566
+
+  Columns 64 through 70
+
+   15.9091   16.1616   16.4141   16.6667   16.9192   17.1717   17.4242
+
+  Columns 71 through 77
+
+   17.6768   17.9293   18.1818   18.4343   18.6869   18.9394   19.1919
+
+  Columns 78 through 84
+
+   19.4444   19.6970   19.9495   20.2020   20.4545   20.7071   20.9596
+
+  Columns 85 through 91
+
+   21.2121   21.4646   21.7172   21.9697   22.2222   22.4747   22.7273
+
+  Columns 92 through 98
+
+   22.9798   23.2323   23.4848   23.7374   23.9899   24.2424   24.4949
+
+  Columns 99 through 100
+
+   24.7475   25.0000
+
+{??? Undefined function or variable 'long'.
+
+Error in ==> <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\viga.m',4,0)">viga at 4</a>
+x2=long/2;
+} 
+viga(25,200e9,6e3,350e-6);
+
+x =
+
+  Columns 1 through 7
+
+         0    0.2525    0.5051    0.7576    1.0101    1.2626    1.5152
+
+  Columns 8 through 14
+
+    1.7677    2.0202    2.2727    2.5253    2.7778    3.0303    3.2828
+
+  Columns 15 through 21
+
+    3.5354    3.7879    4.0404    4.2929    4.5455    4.7980    5.0505
+
+  Columns 22 through 28
+
+    5.3030    5.5556    5.8081    6.0606    6.3131    6.5657    6.8182
+
+  Columns 29 through 35
+
+    7.0707    7.3232    7.5758    7.8283    8.0808    8.3333    8.5859
+
+  Columns 36 through 42
+
+    8.8384    9.0909    9.3434    9.5960    9.8485   10.1010   10.3535
+
+  Columns 43 through 49
+
+   10.6061   10.8586   11.1111   11.3636   11.6162   11.8687   12.1212
+
+  Columns 50 through 56
+
+   12.3737   12.6263   12.8788   13.1313   13.3838   13.6364   13.8889
+
+  Columns 57 through 63
+
+   14.1414   14.3939   14.6465   14.8990   15.1515   15.4040   15.6566
+
+  Columns 64 through 70
+
+   15.9091   16.1616   16.4141   16.6667   16.9192   17.1717   17.4242
+
+  Columns 71 through 77
+
+   17.6768   17.9293   18.1818   18.4343   18.6869   18.9394   19.1919
+
+  Columns 78 through 84
+
+   19.4444   19.6970   19.9495   20.2020   20.4545   20.7071   20.9596
+
+  Columns 85 through 91
+
+   21.2121   21.4646   21.7172   21.9697   22.2222   22.4747   22.7273
+
+  Columns 92 through 98
+
+   22.9798   23.2323   23.4848   23.7374   23.9899   24.2424   24.4949
+
+  Columns 99 through 100
+
+   24.7475   25.0000
+
+viga(25,200e9,6e3,350e-6);
+
+x =
+
+  Columns 1 through 7
+
+         0    0.2525    0.5051    0.7576    1.0101    1.2626    1.5152
+
+  Columns 8 through 14
+
+    1.7677    2.0202    2.2727    2.5253    2.7778    3.0303    3.2828
+
+  Columns 15 through 21
+
+    3.5354    3.7879    4.0404    4.2929    4.5455    4.7980    5.0505
+
+  Columns 22 through 28
+
+    5.3030    5.5556    5.8081    6.0606    6.3131    6.5657    6.8182
+
+  Columns 29 through 35
+
+    7.0707    7.3232    7.5758    7.8283    8.0808    8.3333    8.5859
+
+  Columns 36 through 42
+
+    8.8384    9.0909    9.3434    9.5960    9.8485   10.1010   10.3535
+
+  Columns 43 through 49
+
+   10.6061   10.8586   11.1111   11.3636   11.6162   11.8687   12.1212
+
+  Columns 50 through 56
+
+   12.3737   12.6263   12.8788   13.1313   13.3838   13.6364   13.8889
+
+  Columns 57 through 63
+
+   14.1414   14.3939   14.6465   14.8990   15.1515   15.4040   15.6566
+
+  Columns 64 through 70
+
+   15.9091   16.1616   16.4141   16.6667   16.9192   17.1717   17.4242
+
+  Columns 71 through 77
+
+   17.6768   17.9293   18.1818   18.4343   18.6869   18.9394   19.1919
+
+  Columns 78 through 84
+
+   19.4444   19.6970   19.9495   20.2020   20.4545   20.7071   20.9596
+
+  Columns 85 through 91
+
+   21.2121   21.4646   21.7172   21.9697   22.2222   22.4747   22.7273
+
+  Columns 92 through 98
+
+   22.9798   23.2323   23.4848   23.7374   23.9899   24.2424   24.4949
+
+  Columns 99 through 100
+
+   24.7475   25.0000
+
+viga(25,200e9,6e3,350e-6);
+viga(25,200e9,6e3,350e-6);
+viga(25,200e9,6e3,350e-6);
+viga(25,200e9,6e3,350e-6);
+{??? Error: <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\viga.m',6,82)">File: viga.m Line: 6 Column: 82</a>
+The expression to the left of the equals sign is not a valid target for an
+assignment.
+} 
+viga(25,200e9,6e3,350e-6);
+viga(25,200e9,6e3,350e-6);
+uiopen('C:\Users\Alumnos\Documents\MATLAB\viga.m',1)
+viga(25,200e9,6e3,350e-6);
+uiopen('C:\Users\Alumnos\Documents\MATLAB\viga.m',1)
+viga(25,200e9,6e3,350e-6);
+uiopen('C:\Users\Alumnos\Documents\MATLAB\viga.m',1)
+esf(150,-45,90)
+
+max =
+
+  185.1885
+
+
+min =
+
+  -80.1885
+
+
+ans =
+
+  185.1885
+
+diary off

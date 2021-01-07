@@ -1,0 +1,45 @@
+function [ numero repeticiones ] = imparfrecuente( A )
+v=A(:)';
+x=length(v);
+impares=[];
+frecuencia=[];
+for i=1:x %Recorre la matriz %Primer ciclo for
+    if (rem(v(i),2)~=0) %Comprueba si es impar
+        y=length(impares); %Recorre los impares
+        nuevo=1;
+        if (y==0)
+            frecuencia(1)=1;
+            impares(1)=v(i);
+        end
+        for j=1:y %Segundo ciclo for
+            if (impares(j)==v(i)) %Comprueba si se repite
+                nuevo=0;
+                frecuencia(j)=frecuencia(j)+1;
+                break
+            else
+                nuevo=1;
+            end 
+        end
+        if (nuevo&&y~=0)
+            impares=[impares v(i)];
+            frecuencia(y+1)=1;
+        end
+    end
+end
+impares
+frecuencia
+z=length(frecuencia);
+if (z>0)
+    repeticiones=frecuencia(1)
+    for k=1:z %3er ciclo for
+        if (repeticiones<frecuencia(k))
+            repeticiones=frecuencia(k)
+            numero=impares(k)
+        end
+    end
+else
+    disp('No hay impares')
+    numero=0
+    repeticiones=0
+end
+end

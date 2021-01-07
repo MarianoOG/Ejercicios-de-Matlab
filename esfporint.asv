@@ -1,0 +1,7 @@
+function [ in ] = esfporint(pc,di,dc,do,mo,mi,eo,ei)
+in=pc*dc*((dc^2+di^2)/(ei*(dc^2-di^2))+(do^2+dc^2)/(eo*(do^2-dc^2))-mi/ei+mo/eo);
+pc=pc*(6894.75729);
+di=di
+disp('La interferencia diametral es: ')
+disp(in)
+end

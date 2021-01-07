@@ -1,0 +1,1085 @@
+%creamos un vector
+vec1 = [1/2 1/3 pi squrt(2)]
+{??? Undefined function or method 'squrt' for input arguments of type 'double'.
+} 
+vec1 = [1/2 1/3 pi squrt(2)];
+{??? Undefined function or method 'squrt' for input arguments of type 'double'.
+} 
+vec1 = [1/2 1/3 pi sqrt(2)];
+format short;vec1
+
+vec1 =
+
+    0.5000    0.3333    3.1416    1.4142
+
+format long;vec1
+
+vec1 =
+
+  Columns 1 through 3
+
+   0.500000000000000   0.333333333333333   3.141592653589793
+
+  Column 4
+
+   1.414213562373095
+
+format rat;vec1
+
+vec1 =
+
+       1/2            1/3          355/113       1393/985   
+
+format short e;vec1
+
+vec1 =
+
+  5.0000e-001  3.3333e-001  3.1416e+000  1.4142e+000
+
+format
+45e9
+
+ans =
+
+  4.5000e+010
+
+clear all %borra todas las variables
+so=390;vo=8;t=2;a=-386;
+s=so+vo*t+0.5*a*t^2
+
+s =
+
+  -366
+
+isvarname eps
+
+ans =
+
+     1
+
+realmax
+
+ans =
+
+  1.7977e+308
+
+realmin
+
+ans =
+
+  2.2251e-308
+
+2*realmax
+
+ans =
+
+   Inf
+
+3^10/10
+
+ans =
+
+  5.9049e+003
+
+1+2/3*4
+
+ans =
+
+    3.6667
+
+1+2/(3*4)
+
+ans =
+
+    1.1667
+
+[2^2^3 2^(2^3)]
+
+ans =
+
+    64   256
+
+format rat;1+2/3*4
+
+ans =
+
+      11/3     
+
+format
+%Vector: es un arreglo unidimensional de numeros o valores lógicos situado en una fila o columna.
+%Los elementos de un vector tienen dos atributos: su valor númerico y su posicion (direccion).
+% [] crean un vector () modifican un vector
+%Un vecot admite: valores conocidos (nuemeros), variables predefinidas,funciones (como sqrt()). y expresiones matmaticas.
+A1=[3 5 9 2 7 25 pi]
+
+A1 =
+
+    3.0000    5.0000    9.0000    2.0000    7.0000   25.0000    3.1416
+
+%Consulta un elemento del vector
+A1(4)
+
+ans =
+
+     2
+
+%Asigna un nuevo valor a elemento del vector
+A1(2)=275
+
+A1 =
+
+    3.0000  275.0000    9.0000    2.0000    7.0000   25.0000    3.1416
+
+A2(5=A1(3)+A1(6)
+??? A2(5=A1(3)+A1(6)
+        |
+{Error: The expression to the left of the equals sign is not a valid target
+for an assignment.
+} 
+A2(5)=A1(3)+A1(6)
+
+A2 =
+
+     0     0     0     0    34
+
+A1(5)=A1(3)+A1(6)
+
+A1 =
+
+    3.0000  275.0000    9.0000    2.0000   34.0000   25.0000    3.1416
+
+clear A2
+length(A1)
+
+ans =
+
+     7
+
+a=A1(end)
+
+a =
+
+    3.1416
+
+%Vector con operador :
+A3=1:9
+
+A3 =
+
+     1     2     3     4     5     6     7     8     9
+
+A4=-7:2:8
+
+A4 =
+
+    -7    -5    -3    -1     1     3     5     7
+
+A5=0.1:0.2:2
+
+A5 =
+
+  Columns 1 through 7
+
+    0.1000    0.3000    0.5000    0.7000    0.9000    1.1000    1.3000
+
+  Columns 8 through 10
+
+    1.5000    1.7000    1.9000
+
+A6=70:-2:56
+
+A6 =
+
+    70    68    66    64    62    60    58    56
+
+A7=1:150;
+A8=[pi:pi/6:2pi]
+??? A8=[pi:pi/6:2pi]
+                 |
+{Error: Unexpected MATLAB expression.
+} 
+A8=[pi:pi/6:2*pi]
+
+A8 =
+
+    3.1416    3.6652    4.1888    4.7124    5.2360    5.7596    6.2832
+
+format rat;A8
+
+A8 =
+
+  Columns 1 through 5
+
+     355/113       2485/678       1420/339       1065/226       1775/339   
+
+  Columns 6 through 7
+
+    1653/287        710/113   
+
+format
+B1=linspace(0,2,16) %(Inicio,Fin,Numero de elementos)
+
+B1 =
+
+  Columns 1 through 7
+
+         0    0.1333    0.2667    0.4000    0.5333    0.6667    0.8000
+
+  Columns 8 through 14
+
+    0.9333    1.0667    1.2000    1.3333    1.4667    1.6000    1.7333
+
+  Columns 15 through 16
+
+    1.8667    2.0000
+
+length(B1)
+
+ans =
+
+    16
+
+% Subvector
+B2=A7(1:10)
+
+B2 =
+
+     1     2     3     4     5     6     7     8     9    10
+
+B3=A7(end-5:end)
+
+B3 =
+
+   145   146   147   148   149   150
+
+B4=A8(end/2:end)
+{Warning: Integer operands are required for colon operator when used as index} 
+
+B4 =
+
+    4.7124    5.2360    5.7596    6.2832
+
+lenght (A8)
+{??? Undefined function or method 'lenght' for input arguments of type
+'double'.
+} 
+length(A8)
+
+ans =
+
+     7
+
+A9=linspace(pi,2*pi,7)
+
+A9 =
+
+    3.1416    3.6652    4.1888    4.7124    5.2360    5.7596    6.2832
+
+format long;A9, A8
+
+A9 =
+
+  Columns 1 through 3
+
+   3.141592653589793   3.665191429188092   4.188790204786391
+
+  Columns 4 through 6
+
+   4.712388980384690   5.235987755982988   5.759586531581288
+
+  Column 7
+
+   6.283185307179586
+
+
+A8 =
+
+  Columns 1 through 3
+
+   3.141592653589793   3.665191429188092   4.188790204786391
+
+  Columns 4 through 6
+
+   4.712388980384690   5.235987755982989   5.759586531581287
+
+  Column 7
+
+   6.283185307179586
+
+A10=linspace(0,pi,8)
+
+A10 =
+
+  Columns 1 through 3
+
+                   0   0.448798950512828   0.897597901025655
+
+  Columns 4 through 6
+
+   1.346396851538483   1.795195802051310   2.243994752564138
+
+  Columns 7 through 8
+
+   2.692793703076966   3.141592653589793
+
+B5=A10(end/2:end)
+
+B5 =
+
+  Columns 1 through 3
+
+   1.346396851538483   1.795195802051310   2.243994752564138
+
+  Columns 4 through 5
+
+   2.692793703076966   3.141592653589793
+
+A10(12)
+{??? Index exceeds matrix dimensions.
+} 
+A10(12)=209
+
+A10 =
+
+  1.0e+002 *
+
+  Columns 1 through 3
+
+                   0   0.004487989505128   0.008975979010257
+
+  Columns 4 through 6
+
+   0.013463968515385   0.017951958020513   0.022439947525641
+
+  Columns 7 through 9
+
+   0.026927937030770   0.031415926535898                   0
+
+  Columns 10 through 12
+
+                   0                   0   2.090000000000000
+
+C1=linspace(0,3*pi)
+
+C1 =
+
+  Columns 1 through 3
+
+                   0   0.095199777381509   0.190399554763018
+
+  Columns 4 through 6
+
+   0.285599332144527   0.380799109526036   0.475998886907544
+
+  Columns 7 through 9
+
+   0.571198664289053   0.666398441670562   0.761598219052071
+
+  Columns 10 through 12
+
+   0.856797996433580   0.951997773815089   1.047197551196598
+
+  Columns 13 through 15
+
+   1.142397328578107   1.237597105959615   1.332796883341124
+
+  Columns 16 through 18
+
+   1.427996660722633   1.523196438104142   1.618396215485651
+
+  Columns 19 through 21
+
+   1.713595992867160   1.808795770248669   1.903995547630178
+
+  Columns 22 through 24
+
+   1.999195325011687   2.094395102393195   2.189594879774704
+
+  Columns 25 through 27
+
+   2.284794657156213   2.379994434537722   2.475194211919231
+
+  Columns 28 through 30
+
+   2.570393989300740   2.665593766682249   2.760793544063757
+
+  Columns 31 through 33
+
+   2.855993321445267   2.951193098826775   3.046392876208284
+
+  Columns 34 through 36
+
+   3.141592653589794   3.236792430971302   3.331992208352811
+
+  Columns 37 through 39
+
+   3.427191985734320   3.522391763115829   3.617591540497337
+
+  Columns 40 through 42
+
+   3.712791317878847   3.807991095260355   3.903190872641864
+
+  Columns 43 through 45
+
+   3.998390650023374   4.093590427404882   4.188790204786391
+
+  Columns 46 through 48
+
+   4.283989982167900   4.379189759549409   4.474389536930917
+
+  Columns 49 through 51
+
+   4.569589314312426   4.664789091693936   4.759988869075444
+
+  Columns 52 through 54
+
+   4.855188646456953   4.950388423838461   5.045588201219971
+
+  Columns 55 through 57
+
+   5.140787978601479   5.235987755982988   5.331187533364497
+
+  Columns 58 through 60
+
+   5.426387310746006   5.521587088127514   5.616786865509025
+
+  Columns 61 through 63
+
+   5.711986642890533   5.807186420272042   5.902386197653550
+
+  Columns 64 through 66
+
+   5.997585975035060   6.092785752416568   6.187985529798077
+
+  Columns 67 through 69
+
+   6.283185307179587   6.378385084561096   6.473584861942604
+
+  Columns 70 through 72
+
+   6.568784639324113   6.663984416705622   6.759184194087131
+
+  Columns 73 through 75
+
+   6.854383971468639   6.949583748850149   7.044783526231657
+
+  Columns 76 through 78
+
+   7.139983303613166   7.235183080994674   7.330382858376185
+
+  Columns 79 through 81
+
+   7.425582635757693   7.520782413139202   7.615982190520710
+
+  Columns 82 through 84
+
+   7.711181967902220   7.806381745283728   7.901581522665237
+
+  Columns 85 through 87
+
+   7.996781300046747   8.091981077428255   8.187180854809764
+
+  Columns 88 through 90
+
+   8.282380632191272   8.377580409572781   8.472780186954291
+
+  Columns 91 through 93
+
+   8.567979964335800   8.663179741717309   8.758379519098817
+
+  Columns 94 through 96
+
+   8.853579296480326   8.948779073861834   9.043978851243343
+
+  Columns 97 through 99
+
+   9.139178628624853   9.234378406006361   9.329578183387872
+
+  Column 100
+
+   9.424777960769379
+
+whos
+  Name      Size             Bytes  Class     Attributes
+
+  A1        1x7                 56  double              
+  A10       1x12                96  double              
+  A3        1x9                 72  double              
+  A4        1x8                 64  double              
+  A5        1x10                80  double              
+  A6        1x8                 64  double              
+  A7        1x150             1200  double              
+  A8        1x7                 56  double              
+  A9        1x7                 56  double              
+  B1        1x16               128  double              
+  B2        1x10                80  double              
+  B3        1x6                 48  double              
+  B4        1x4                 32  double              
+  B5        1x5                 40  double              
+  C1        1x100              800  double              
+  a         1x1                  8  double              
+  ans       1x1                  8  double              
+  s         1x1                  8  double              
+  so        1x1                  8  double              
+  t         1x1                  8  double              
+  vo        1x1                  8  double              
+
+clear all
+A10
+{??? Undefined function or variable 'A10'.
+} 
+A10=linspace(0,pi,8)
+
+A10 =
+
+  Columns 1 through 3
+
+                   0   0.448798950512828   0.897597901025655
+
+  Columns 4 through 6
+
+   1.346396851538483   1.795195802051310   2.243994752564138
+
+  Columns 7 through 8
+
+   2.692793703076966   3.141592653589793
+
+A11=A10(2)+A10(4)*2
+
+A11 =
+
+   3.141592653589793
+
+pi/7
+
+ans =
+
+   0.448798950512828
+
+2pi/7
+??? 2pi/7
+     |
+{Error: Unexpected MATLAB expression.
+} 
+2*pi/7
+
+ans =
+
+   0.897597901025655
+
+3*pi/7
+
+ans =
+
+   1.346396851538483
+
+format rat; pi/7
+
+ans =
+
+     355/791   
+
+format
+A11
+
+A11 =
+
+    3.1416
+
+a11
+{??? Undefined function or variable 'a11'.
+} 
+A12=1:15
+
+A12 =
+
+  Columns 1 through 12
+
+     1     2     3     4     5     6     7     8     9    10    11    12
+
+  Columns 13 through 15
+
+    13    14    15
+
+B13=A12(2:2:end)
+
+B13 =
+
+     2     4     6     8    10    12    14
+
+ve1=[25 18 -4 17 19 57 51]
+
+ve1 =
+
+    25    18    -4    17    19    57    51
+
+ve1(10)=120
+
+ve1 =
+
+    25    18    -4    17    19    57    51     0     0   120
+
+ve4=ve1([3,5,7:10])
+
+ve4 =
+
+    -4    19    51     0     0   120
+
+ve5=ve1([1:3,6,8:end])
+
+ve5 =
+
+    25    18    -4    57     0     0   120
+
+vec6=[1 2 3 5 7, ve1]
+
+vec6 =
+
+  Columns 1 through 12
+
+     1     2     3     5     7    25    18    -4    17    19    57    51
+
+  Columns 13 through 15
+
+     0     0   120
+
+vec6'
+
+ans =
+
+     1
+     2
+     3
+     5
+     7
+    25
+    18
+    -4
+    17
+    19
+    57
+    51
+     0
+     0
+   120
+
+vec7=[3 9 6 2,vec1]'
+{??? Undefined function or variable 'vec1'.
+} 
+vec7=[3 9 6 2,ve1]'
+
+vec7 =
+
+     3
+     9
+     6
+     2
+    25
+    18
+    -4
+    17
+    19
+    57
+    51
+     0
+     0
+   120
+
+vec300=[3
+4
+5
+56
+6
+7
+8
+9
+0
+1
+3
+6
+8]
+
+vec300 =
+
+     3
+     4
+     5
+    56
+     6
+     7
+     8
+     9
+     0
+     1
+     3
+     6
+     8
+
+M1=[1 2 3 4 5 6
+7 8 9 4 5 6 
+6 5 4 5 6 4
+7 8 9 5 6 5
+4 5 6 4 7 8]
+
+M1 =
+
+     1     2     3     4     5     6
+     7     8     9     4     5     6
+     6     5     4     5     6     4
+     7     8     9     5     6     5
+     4     5     6     4     7     8
+
+vec7=2*ve6(2:6)
+{??? Undefined function or method 've6' for input arguments of type 'double'.
+} 
+vec7=2*vec6(2:6)
+
+vec7 =
+
+     4     6    10    14    50
+
+vec6
+
+vec6 =
+
+  Columns 1 through 12
+
+     1     2     3     5     7    25    18    -4    17    19    57    51
+
+  Columns 13 through 15
+
+     0     0   120
+
+M1(1,1)
+
+ans =
+
+     1
+
+M1(5,4)
+
+ans =
+
+     4
+
+M1
+
+M1 =
+
+     1     2     3     4     5     6
+     7     8     9     4     5     6
+     6     5     4     5     6     4
+     7     8     9     5     6     5
+     4     5     6     4     7     8
+
+M1(1,1)=45
+
+M1 =
+
+    45     2     3     4     5     6
+     7     8     9     4     5     6
+     6     5     4     5     6     4
+     7     8     9     5     6     5
+     4     5     6     4     7     8
+
+2*M1
+
+ans =
+
+    90     4     6     8    10    12
+    14    16    18     8    10    12
+    12    10     8    10    12     8
+    14    16    18    10    12    10
+     8    10    12     8    14    16
+
+clear M1
+clc
+clear all
+am2=10:2:34
+
+am2 =
+
+    10    12    14    16    18    20    22    24    26    28    30    32    34
+
+bm4=am2([2*i,3*i,7:10])
+{??? Subscript indices must either be real positive integers or logicals.
+} 
+i=2
+
+i =
+
+     2
+
+bm4=am2([2*i,3*i,7:10])
+
+bm4 =
+
+    16    20    22    24    26    28
+
+RE=[3 8 2 25];GT:4:3:16;
+{??? Undefined function or variable 'GT'.
+} 
+RE=[3 8 2 25];GT=4:3:16;
+RHT=[RE GT]
+
+RHT =
+
+     3     8     2    25     4     7    10    13    16
+
+RTV=[RE' ;GT']
+
+RTV =
+
+     3
+     8
+     2
+    25
+     4
+     7
+    10
+    13
+    16
+
+kTV=[RE' GT']
+{??? Error using ==> horzcat
+CAT arguments dimensions are not consistent.
+} 
+kTV=[RE' GT']
+{??? Error using ==> horzcat
+CAT arguments dimensions are not consistent.
+} 
+kTV=[RE'
+GT]
+{??? Error using ==> vertcat
+CAT arguments dimensions are not consistent.
+} 
+kTV=[RE'
+GT']
+
+kTV =
+
+     3
+     8
+     2
+    25
+     4
+     7
+    10
+    13
+    16
+
+am2
+
+am2 =
+
+  Columns 1 through 12
+
+    10    12    14    16    18    20    22    24    26    28    30    32
+
+  Column 13
+
+    34
+
+am2(3)=[] %borra elemento 3
+
+am2 =
+
+    10    12    16    18    20    22    24    26    28    30    32    34
+
+am2(2:2:end)=[]
+
+am2 =
+
+    10    16    20    24    28    32
+
+clc
+%Mathlab trabaja por default las operaciones del algebra lineal
+mb1=1:6
+
+mb1 =
+
+     1     2     3     4     5     6
+
+tb1=6:-1:1
+
+tb1 =
+
+     6     5     4     3     2     1
+
+mb1+tb1
+
+ans =
+
+     7     7     7     7     7     7
+
+M1=[1 2 3 4 5 6
+2 3 4 5 6 7
+3 4 5 6 7 8
+4 5 6 7 8 9]
+
+M1 =
+
+     1     2     3     4     5     6
+     2     3     4     5     6     7
+     3     4     5     6     7     8
+     4     5     6     7     8     9
+
+M1(1)
+
+ans =
+
+     1
+
+M1(2)
+
+ans =
+
+     2
+
+M1(5)
+
+ans =
+
+     2
+
+mb1-tb1
+
+ans =
+
+    -5    -3    -1     1     3     5
+
+mb1*tb1
+{??? Error using ==> mtimes
+Inner matrix dimensions must agree.
+} 
+mb1.*tb1
+
+ans =
+
+     6    10    12    12    10     6
+
+tb1+2
+
+ans =
+
+     8     7     6     5     4     3
+
+tb1
+
+tb1 =
+
+     6     5     4     3     2     1
+
+tb1.^
+??? tb1.^
+         |
+{Error: Expression or statement is incomplete or incorrect.
+} 
+tb1.^2
+
+ans =
+
+    36    25    16     9     4     1
+
+tb1^2
+{??? Error using ==> mpower
+Inputs must be a scalar and a square matrix.
+} 
+x=[1 3 4 5 67 23 12 1 3 4 45 23 -4]
+
+x =
+
+  Columns 1 through 12
+
+     1     3     4     5    67    23    12     1     3     4    45    23
+
+  Column 13
+
+    -4
+
+max(x)
+
+ans =
+
+    67
+
+[a b]=max(x)
+
+a =
+
+    67
+
+
+b =
+
+     5
+
+minmin(x)
+{??? Undefined function or method 'minmin' for input arguments of type
+'double'.
+} 
+mean(x)
+
+ans =
+
+   14.3846
+
+median(x)
+
+ans =
+
+     4
+
+sum(x)
+
+ans =
+
+   187
+
+sort(x)
+
+ans =
+
+  Columns 1 through 12
+
+    -4     1     1     3     3     4     4     5    12    23    23    45
+
+  Column 13
+
+    67
+
+x>=4
+
+ans =
+
+  Columns 1 through 12
+
+     0     0     1     1     1     1     1     0     0     1     1     1
+
+  Column 13
+
+     0
+
+find(x>10)
+
+ans =
+
+     5     6     7    11    12
+
+x
+
+x =
+
+  Columns 1 through 12
+
+     1     3     4     5    67    23    12     1     3     4    45    23
+
+  Column 13
+
+    -4
+
+libray off
+{??? Undefined function or method 'libray' for input arguments of type
+'char'.
+} 
+diary off

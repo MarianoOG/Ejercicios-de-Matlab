@@ -1,0 +1,485 @@
+uiopen('F:\Mariano\Herramientas\leytan.m',1)
+uiopen('F:\Mariano\Herramientas\leytan.m',1)
+leytan(36,76,15.77)
+
+ans =
+
+   -6.9787
+
+leytan(68,36,10)
+
+ans =
+
+   -8.4238
+
+leytan(68,36,10)
+
+ans =
+
+   -8.4238
+
+leytan(68,36,10)
+
+B =
+
+    76
+
+
+a =
+
+   -4.3738
+
+
+ans =
+
+   -4.3738
+
+leytan(68,36,10)
+
+B =
+
+    76
+
+
+a =
+
+  -15.4438
+
+
+ans =
+
+  -15.4438
+
+leytan(68,36,10)
+
+B =
+
+    76
+
+
+a =
+
+   15.4438
+
+
+ans =
+
+   15.4438
+
+leytan(68,36,10)
+
+B =
+
+    76
+
+
+a =
+
+   15.4438
+
+{??? Undefined function or method 'sen' for input arguments
+of type 'double'.
+
+Error in ==> <a href="matlab: opentoline('F:\Mariano\Herramientas\leytan.m',5,0)">leytan at 5</a>
+b=a*sen(A)/sen(B)
+} 
+
+leytan(68,36,10)
+
+B =
+
+    76
+
+
+a =
+
+   15.4438
+
+
+b =
+
+  -24.4961
+
+
+ans =
+
+   15.4438
+
+leytan(68,36,10)
+
+B =
+
+    76
+
+
+a =
+
+   15.4438
+
+
+b =
+
+   -9.7367
+
+
+ans =
+
+   15.4438
+
+leytan(68,36,10)
+
+B =
+
+    76
+
+
+b =
+
+   16.5077
+
+{??? Undefined function or variable "a".
+
+Error in ==> <a href="matlab: opentoline('F:\Mariano\Herramientas\leytan.m',8,0)">leytan at 8</a>
+a=a*sin(B)/sin(A)
+} 
+leytan(68,36,10)
+
+B =
+
+    76
+
+
+b =
+
+   16.5077
+
+
+a =
+
+  -26.1835
+
+
+ans =
+
+  -26.1835
+
+leytan(68,36,10)
+
+B =
+
+    76
+
+
+b =
+
+   16.5077
+
+
+a =
+
+    0.0634
+
+
+ans =
+
+    0.0634
+
+leytan(68,36,10)
+
+B =
+
+    76
+
+
+b =
+
+   16.5077
+
+
+a =
+
+   15.7742
+
+
+ans =
+
+    76
+
+leytan(68,36,10)
+
+B =
+
+    76
+
+
+a =
+
+   15.7742
+
+
+b =
+
+   16.5077
+
+
+ans =
+
+    76
+
+meca(0,0)
+
+tf =
+
+    0.1091
+
+
+k =
+
+    1.0909
+
+{??? Error using ==> cos
+Not enough input arguments.
+
+Error in ==> <a href="matlab: opentoline('F:\Mariano\Herramientas\meca.m',10,0)">meca at 10</a>
+x=r*cos()
+} 
+meca(0,0)
+
+tf =
+
+    0.1091
+
+
+k =
+
+    1.0909
+
+
+x =
+
+     0
+
+{??? Undefined function or method 'subpot' for input
+arguments of type 'double'.
+
+Error in ==> <a href="matlab: opentoline('F:\Mariano\Herramientas\meca.m',15,0)">meca at 15</a>
+subpot(2,2,1)
+} 
+meca(0,0)
+
+tf =
+
+    0.1091
+
+
+k =
+
+    1.0909
+
+
+x =
+
+     0
+
+
+ans =
+
+     0
+
+meca(0,0)
+
+tf =
+
+    0.1091
+
+
+k =
+
+    0.1091
+
+
+x =
+
+     0
+
+
+ans =
+
+     0
+
+meca(0.125,0.25)
+{??? Undefined function or variable 't'.
+
+Error in ==> <a href="matlab: opentoline('F:\Mariano\Herramientas\meca.m',7,0)">meca at 7</a>
+th=TD+t;
+} 
+meca(0.125,0.25)
+
+d2 =
+
+  Columns 1 through 5
+
+    0.0508    0.0508    0.0508    0.0508    0.0508
+
+  Columns 6 through 10
+
+    0.0507    0.0507    0.0507    0.0507    0.0507
+
+  Columns 11 through 15
+
+    0.0507    0.0507    0.0507    0.0507    0.0507
+
+  Columns 16 through 20
+
+    0.0507    0.0507    0.0507    0.0506    0.0506
+
+  Columns 21 through 25
+
+    0.0506    0.0506    0.0506    0.0506    0.0506
+
+  Columns 26 through 30
+
+    0.0506    0.0506    0.0506    0.0506    0.0506
+
+  Columns 31 through 35
+
+    0.0506    0.0506    0.0505    0.0505    0.0505
+
+  Columns 36 through 40
+
+    0.0505    0.0505    0.0505    0.0505    0.0505
+
+  Columns 41 through 45
+
+    0.0505    0.0505    0.0505    0.0505    0.0505
+
+  Columns 46 through 50
+
+    0.0505    0.0504    0.0504    0.0504    0.0504
+
+  Columns 51 through 55
+
+    0.0504    0.0504    0.0504    0.0504    0.0504
+
+  Columns 56 through 60
+
+    0.0504    0.0504    0.0504    0.0504    0.0504
+
+  Columns 61 through 65
+
+    0.0503    0.0503    0.0503    0.0503    0.0503
+
+  Columns 66 through 70
+
+    0.0503    0.0503    0.0503    0.0503    0.0503
+
+  Columns 71 through 75
+
+    0.0503    0.0503    0.0503    0.0503    0.0502
+
+  Columns 76 through 80
+
+    0.0502    0.0502    0.0502    0.0502    0.0502
+
+  Columns 81 through 85
+
+    0.0502    0.0502    0.0502    0.0502    0.0502
+
+  Columns 86 through 90
+
+    0.0502    0.0502    0.0502    0.0501    0.0501
+
+  Columns 91 through 95
+
+    0.0501    0.0501    0.0501    0.0501    0.0501
+
+  Columns 96 through 100
+
+    0.0501    0.0501    0.0501    0.0501    0.0501
+
+  Columns 101 through 105
+
+    0.0501    0.0501    0.0501    0.0500    0.0500
+
+  Columns 106 through 110
+
+    0.0500    0.0500    0.0500    0.0500    0.0500
+
+  Columns 111 through 115
+
+    0.0500    0.0500    0.0500    0.0500    0.0500
+
+  Columns 116 through 120
+
+    0.0500    0.0500    0.0499    0.0499    0.0499
+
+  Columns 121 through 125
+
+    0.0499    0.0499    0.0499    0.0499    0.0499
+
+  Columns 126 through 130
+
+    0.0499    0.0499    0.0499    0.0499    0.0499
+
+  Columns 131 through 135
+
+    0.0499    0.0499    0.0498    0.0498    0.0498
+
+  Columns 136 through 140
+
+    0.0498    0.0498    0.0498    0.0498    0.0498
+
+  Columns 141 through 145
+
+    0.0498    0.0498    0.0498    0.0498    0.0498
+
+  Columns 146 through 150
+
+    0.0498    0.0498    0.0497    0.0497    0.0497
+
+  Columns 151 through 155
+
+    0.0497    0.0497    0.0497    0.0497    0.0497
+
+  Columns 156 through 160
+
+    0.0497    0.0497    0.0497    0.0497    0.0497
+
+  Columns 161 through 165
+
+    0.0497    0.0497    0.0496    0.0496    0.0496
+
+  Columns 166 through 170
+
+    0.0496    0.0496    0.0496    0.0496    0.0496
+
+  Columns 171 through 175
+
+    0.0496    0.0496    0.0496    0.0496    0.0496
+
+  Columns 176 through 180
+
+    0.0496    0.0496    0.0495    0.0495    0.0495
+
+  Columns 181 through 185
+
+    0.0495    0.0495    0.0495    0.0495    0.0495
+
+  Columns 186 through 190
+
+    0.0495    0.0495    0.0495    0.0495    0.0495
+
+  Columns 191 through 195
+
+    0.0495    0.0495    0.0495    0.0494    0.0494
+
+  Columns 196 through 200
+
+    0.0494    0.0494    0.0494    0.0494    0.0494
+
+{??? Error using ==> mpower
+Inputs must be a scalar and a square matrix.
+
+Error in ==> <a href="matlab: opentoline('F:\Mariano\Herramientas\meca.m',13,0)">meca at 13</a>
+x2=-r*TD^2*cos(th)-(4*r^2*TD^2*cos(2*th).*d2+(r^2*sin(2*th)*TD).^2)./(4*d2^(3/2));} 
+diary off

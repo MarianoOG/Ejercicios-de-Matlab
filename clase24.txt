@@ -1,0 +1,809 @@
+syms x y z a b
+-7*a+3*a
+ 
+ans =
+ 
+(-4)*a
+ 
+(-9+15)*b
+ 
+ans =
+ 
+6*b
+ 
+(x^(a+1)/2-3*y^(b-1)/4-1/6)+(3*x^(a+1)+y^(b-1)+1/4)
+ 
+ans =
+ 
+(7*x^(a + 1))/2 + y^(b - 1)/4 + 1/12
+ 
+E1=x^2+5;E2=y^3-2;
+s1=E1*E2
+ 
+s1 =
+ 
+(x^2 + 5)*(y^3 - 2)
+ 
+factor((2*x^4-5*x^3+x^2)/(-x^2))
+ 
+ans =
+ 
+- 2*x^2 + 5*x - 1
+ 
+pretty(ans)
+ 
+       2 
+  - 2 x  + 5 x - 1
+factor(a^2+2*a*b+b^2)
+ 
+ans =
+ 
+(a + b)^2
+ 
+factor(x^7+y^7)
+ 
+ans =
+ 
+(x + y)*(x^6 - x^5*y + x^4*y^2 - x^3*y^3 + x^2*y^4 - x*y^5 + y^6)
+ 
+pretty(ans)
+ 
+            6    5      4  2    3  3    2  4      5    6 
+  (x + y) (x  - x  y + x  y  - x  y  + x  y  - x y  + y )
+A1=2*x^2/3*y,A2=6*y^2/4*x
+ 
+A1 =
+ 
+(2*x^2*y)/3
+ 
+ 
+A2 =
+ 
+(3*x*y^2)/2
+ 
+A3=5*x*y/2*y
+ 
+A3 =
+ 
+(5*x*y^2)/2
+ 
+A4=A1*A2*A3
+ 
+A4 =
+ 
+(5*x^4*y^5)/2
+ 
+pretty(ans}
+??? pretty(ans}
+              |
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+pretty(ans)
+ 
+            6    5      4  2    3  3    2  4      5    6 
+  (x + y) (x  - x  y + x  y  - x  y  + x  y  - x y  + y )
+pretty(A4)
+ 
+     4  5 
+  5 x  y 
+  ------- 
+     2
+A5=1/(sqrt(x^2+1)/(x^2+1))
+ 
+A5 =
+ 
+(x^2 + 1)^(1/2)
+ 
+A5=1/(sqrt(x^2+1))/(x^2+1)
+ 
+A5 =
+ 
+1/(x^2 + 1)^(3/2)
+ 
+pretty(A5)
+ 
+      1 
+  --------- 
+          3 
+          - 
+          2 
+    2 
+  (x  + 1)
+%expandir
+expand((x+2^y+3^z)^2)
+ 
+ans =
+ 
+2*2^y*3^z + 2^(2*y) + 3^(2*z) + 2*2^y*x + 2*3^z*x + x^2
+ 
+expand((a+b)*(a-b))
+ 
+ans =
+ 
+a^2 - b^2
+ 
+expand(tan(x+y))
+ 
+ans =
+ 
+-(tan(x) + tan(y))/(tan(x)*tan(y) - 1)
+ 
+expand(sin(2*x))
+ 
+ans =
+ 
+2*cos(x)*sin(x)
+ 
+expand(sin(y+x))
+ 
+ans =
+ 
+cos(x)*sin(y) + cos(y)*sin(x)
+ 
+symplify(3*a-2*sqrt(15*a*b)+5*b)
+{??? Undefined function or method 'symplify' for input arguments of type 'sym'.
+} 
+simplify(3*a-2*sqrt(15*a*b)+5*b)
+ 
+ans =
+ 
+3*a + 5*b - 2*(15*a*b)^(1/2)
+ 
+simplify((b-1)/(b-2-(b^2+2))/(b-(b-2)/(b+1)))
+ 
+ans =
+ 
+-(b^2 - 1)/((b^2 + 2)*(b^2 - b + 4))
+ 
+simplify((b-1)/(b+2-(b^2+2))/(b-(b-2)/(b+1)))
+ 
+ans =
+ 
+-(b + 1)/(b*(b^2 + 2))
+ 
+simplify((b-1)/(b+2-(b^2+2))/(b-(b-2)/(b+1)))9
+??? simplify((b-1)/(b+2-(b^2+2))/(b-(b-2)/(b+1)))9
+                                                 |
+{Error: Unexpected MATLAB expression.
+} 
+simplify((b-1)/(b+2-(b^2+2))/(b-(b-2)/(b+1))))
+??? simplify((b-1)/(b+2-(b^2+2))/(b-(b-2)/(b+1))))
+                                                 |
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+simplify((b-1)/(b+2-(b^2+2)/(b-(b-2)/(b+1))))
+ 
+ans =
+ 
+b - 1
+ 
+E7=2*x^3-3*x^2+x-6
+ 
+E7 =
+ 
+2*x^3 - 3*x^2 + x - 6
+ 
+E8=x-2
+ 
+E8 =
+ 
+x - 2
+ 
+simplify(E7/E8)
+ 
+ans =
+ 
+2*x^2 + x + 3
+ 
+collect(E4)
+{??? Undefined function or variable 'E4'.
+} 
+E4=(x-5)^2+(y-3)^2
+ 
+E4 =
+ 
+(x - 5)^2 + (y - 3)^2
+ 
+collect(E4)
+ 
+ans =
+ 
+x^2 - 10*x + (y - 3)^2 + 25
+ 
+collect(E4,y)
+ 
+ans =
+ 
+y^2 - 6*y + (x - 5)^2 + 9
+ 
+collect((x-1)/a-1/b)*(x-1/b-1/c)*(x-1/c-1/a)
+{??? Undefined function or variable 'c'.
+} 
+collect((x-1)/a-1/b)*(x-1/b-1/c)*(x-1/c-1/a))
+??? collect((x-1)/a-1/b)*(x-1/b-1/c)*(x-1/c-1/a))
+                                                |
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+syms c
+collect((x-1/a-1/b)*(x-1/b-1/c)*(x-1/c-1/a))
+ 
+ans =
+ 
+x^3 + (- 2/a - 2/b - 2/c)*x^2 + ((1/a + 1/b)*(1/a + 1/c) + (1/b + 1/c)*(2/a + 1/b + 1/c))*x - (1/a + 1/b)*(1/a + 1/c)*(1/b + 1/c)
+ 
+simple(E4)
+ 
+simplify:
+ 
+x^2 - 10*x + y^2 - 6*y + 34
+ 
+ 
+radsimp:
+ 
+(x - 5)^2 + (y - 3)^2
+ 
+ 
+simplify(100):
+ 
+(x - 5)^2 + (y - 3)^2
+ 
+ 
+combine(sincos):
+ 
+(x - 5)^2 + (y - 3)^2
+ 
+ 
+combine(sinhcosh):
+ 
+(x - 5)^2 + (y - 3)^2
+ 
+ 
+combine(ln):
+ 
+(x - 5)^2 + (y - 3)^2
+ 
+ 
+factor:
+ 
+x^2 - 10*x + y^2 - 6*y + 34
+ 
+ 
+expand:
+ 
+x^2 - 10*x + y^2 - 6*y + 34
+ 
+ 
+combine:
+ 
+(x - 5)^2 + (y - 3)^2
+ 
+ 
+rewrite(exp):
+ 
+(x - 5)^2 + (y - 3)^2
+ 
+ 
+rewrite(sincos):
+ 
+(x - 5)^2 + (y - 3)^2
+ 
+ 
+rewrite(sinhcosh):
+ 
+(x - 5)^2 + (y - 3)^2
+ 
+ 
+rewrite(tan):
+ 
+(x - 5)^2 + (y - 3)^2
+ 
+ 
+mwcos2sin:
+ 
+(x - 5)^2 + (y - 3)^2
+ 
+ 
+collect(x):
+ 
+x^2 - 10*x + (y - 3)^2 + 25
+ 
+ 
+ans =
+ 
+(x - 5)^2 + (y - 3)^2
+ 
+d=[x+1 x^2 x-y;1/x 3*y/x 1/(1+x); 2-x x/4 3/2]
+ 
+d =
+ 
+[ x + 1,     x^2,     x - y]
+[   1/x, (3*y)/x, 1/(x + 1)]
+[ 2 - x,     x/4,       3/2]
+ 
+d(2,2)
+ 
+ans =
+ 
+(3*y)/x
+ 
+c=d(2,:)
+ 
+c =
+ 
+[ 1/x, (3*y)/x, 1/(x + 1)]
+ 
+det(d)
+ 
+ans =
+ 
+(- 4*x^4 + 12*x^3*y + 2*x^3 - 12*x^2*y^2 + 5*x^2*y - 6*x^2 + 12*x*y^2 + 11*x*y + 24*y^2 + 18*y)/(4*x^2 + 4*x)
+ 
+clear all,clc
+syms a b c
+A=[1 a a^2;1 b b^2; 1 c c^2]
+ 
+A =
+ 
+[ 1, a, a^2]
+[ 1, b, b^2]
+[ 1, c, c^2]
+ 
+factor(inv(A))
+ 
+ans =
+ 
+[    (b*c)/((a - b)*(a - c)),  -(a*c)/((a - b)*(b - c)),    (a*b)/((a - c)*(b - c))]
+[ -(b + c)/((a - b)*(a - c)), (a + c)/((a - b)*(b - c)), -(a + b)/((a - c)*(b - c))]
+[        1/((a - b)*(a - c)),      -1/((a - b)*(b - c)),        1/((a - c)*(b - c))]
+ 
+pretty(ans)
+ 
+  +-                                                         -+ 
+  |         b c                 a c               a b         | 
+  |   ---------------,  - ---------------,  ---------------   | 
+  |   (a - b) (a - c)     (a - b) (b - c)   (a - c) (b - c)   | 
+  |                                                           | 
+  |         b + c             a + c               a + b       | 
+  |  - ---------------,  ---------------,  - ---------------  | 
+  |    (a - b) (a - c)   (a - b) (b - c)     (a - c) (b - c)  | 
+  |                                                           | 
+  |          1                   1                 1          | 
+  |   ---------------,  - ---------------,  ---------------   | 
+  |   (a - b) (a - c)     (a - b) (b - c)   (a - c) (b - c)   | 
+  +-                                                         -+
+det(A)
+ 
+ans =
+ 
+- a^2*b + a^2*c + a*b^2 - a*c^2 - b^2*c + b*c^2
+ 
+syms s
+H=-(1/6)/(s+3)-(1/2)/(s+1)+(2/3)/s
+ 
+H =
+ 
+2/(3*s) - 1/(6*(s + 3)) - 1/(2*(s + 1))
+ 
+[N,D]=numden(H)
+ 
+N =
+ 
+s + 2
+ 
+ 
+D =
+ 
+s^3 + 4*s^2 + 3*s
+ 
+simplify(H)
+ 
+ans =
+ 
+(s + 2)/(s*(s + 1)*(s + 3))
+ 
+H
+ 
+H =
+ 
+2/(3*s) - 1/(6*(s + 3)) - 1/(2*(s + 1))
+ 
+D=expand(D)
+ 
+D =
+ 
+s^3 + 4*s^2 + 3*s
+ 
+E33=x^2+6*x+7
+{??? Undefined function or variable 'x'.
+} 
+syms x s
+E33=x^2+6*x+7
+ 
+E33 =
+ 
+x^2 + 6*x + 7
+ 
+G=subs(E33,x,2) %sustituye en 2
+
+G =
+
+    23
+
+ezplot(E33,[-2 6]) %[-2 6] rango en x
+E34=s^3-14*s^2+65*s-100;
+F=subs(E34,s,7.1)
+
+F =
+
+   13.6710
+
+G=double(ans) %convierte a decimal
+{??? Error using ==> mupadmex
+Error in MuPAD command: DOUBLE cannot convert the input expression into a double
+array.
+
+If the input expression contains a symbolic variable, use the VPA function instead.
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',927,0)">sym.sym>sym.double at 927</a>
+            Xstr = mupadmex('mllib::double', S.s, 0);
+} 
+G=double(F) %convierte a decimal
+
+G =
+
+   13.6710
+
+syms u v w
+fm=pi*v*w/(u+v+w)
+ 
+fm =
+ 
+(pi*v*w)/(u + v + w)
+ 
+subs(fm,u,2*v)
+ 
+ans =
+ 
+(pi*v*w)/(3*v + w)
+ 
+subs(ans,w,1)
+ 
+ans =
+ 
+(pi*v)/(3*v + 1)
+ 
+double(ans)
+{??? Error using ==> mupadmex
+Error in MuPAD command: DOUBLE cannot convert the input expression into a double
+array.
+
+If the input expression contains a symbolic variable, use the VPA function instead.
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',927,0)">sym.sym>sym.double at 927</a>
+            Xstr = mupadmex('mllib::double', S.s, 0);
+} 
+subs(ans,v,1)
+
+ans =
+
+    0.7854
+
+y=sym('y(x)')
+ 
+y =
+ 
+y(x)
+ 
+gx=subs(y,x,x)-2*subs(y,x,x-1)+3*subs(y,x,x-2)
+ 
+gx =
+ 
+3*y(x - 2) - 2*y(x - 1) + y(x)
+ 
+a1=[1 4 -7 -10]
+
+a1 =
+
+     1     4    -7   -10
+
+A1=poly2sym
+{??? Input argument "c" is undefined.
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\poly2sym.m',26,0)">poly2sym at 26</a>
+p = poly2sym(sym(c),sym(x));
+} 
+A1=poly2sym(a1)
+ 
+A1 =
+ 
+x^3 + 4*x^2 - 7*x - 10
+ 
+clear all,clc
+syms
+ 
+ 
+syms x y
+F7=((sin(x)-cos(x)/(sin(x)+cos(x)))
+??? F7=((sin(x)-cos(x)/(sin(x)+cos(x)))
+                                       |
+{Error: Expression or statement is incorrect--possibly unbalanced (, {, or [.
+} 
+F7=((sin(x)-cos(x))/(sin(x)+cos(x)))
+ 
+F7 =
+ 
+-(cos(x) - sin(x))/(cos(x) + sin(x))
+ 
+F8=diff(F7)
+ 
+F8 =
+ 
+(cos(x) - sin(x))^2/(cos(x) + sin(x))^2 + 1
+ 
+simply(F8)
+{??? Undefined function or method 'simply' for input arguments of type 'sym'.
+} 
+simplify(F8)
+ 
+ans =
+ 
+2/(sin(2*x) + 1)
+ 
+F9=(2*x^3+5)^4
+ 
+F9 =
+ 
+(2*x^3 + 5)^4
+ 
+F9=diff(E9)
+{??? Undefined function or variable 'E9'.
+} 
+E9=diff(F9)
+ 
+E9 =
+ 
+24*x^2*(2*x^3 + 5)^3
+ 
+F7=9*x^3
+ 
+F7 =
+ 
+9*x^3
+ 
+diff(F7,x,2)
+ 
+ans =
+ 
+54*x
+ 
+diff(F7,x)
+ 
+ans =
+ 
+27*x^2
+ 
+diff(F7,y)
+ 
+ans =
+ 
+0
+ 
+clear all,cl
+{??? Undefined function or variable 'cl'.
+} 
+clear all,clc
+solve('x-5')
+ 
+ans =
+ 
+5
+ 
+solve('x^2-2=5')
+ 
+ans =
+ 
+  7^(1/2)
+ -7^(1/2)
+ 
+solve('x^2=-5')
+ 
+ans =
+ 
+ -5^(1/2)*i
+  5^(1/2)*i
+ 
+eq1='2*x-3*y-5*z=-19'
+
+eq1 =
+
+2*x-3*y-5*z=-19
+
+eq2='3*x-4*y+z=-2'
+
+eq2 =
+
+3*x-4*y+z=-2
+
+eq2='x+y+z=6'
+
+eq2 =
+
+x+y+z=6
+
+eq2='3*x-4*y+z=-2'
+
+eq2 =
+
+3*x-4*y+z=-2
+
+eq3='x+y+z=6'
+
+eq3 =
+
+x+y+z=6
+
+[x,y,z]=solve(eq1,eq2,eq3)
+ 
+x =
+ 
+1
+ 
+ 
+y =
+ 
+2
+ 
+ 
+z =
+ 
+3
+ 
+M=solve('y=1/(1+x^2)','y=1.001-0.5*x')
+
+M = 
+
+    x: [3x1 sym]
+    y: [3x1 sym]
+
+[M.x(1),M.y(1)]
+ 
+ans =
+ 
+[ 0.93668681798701252902214378284929 - 8.6095777648116760837553945597332*10^(-41)*i, 4.3047888824058380418776972798666*10^(-41)*i + 0.53265659100649373548892810857535]
+ 
+[M.x(2),M.y(2)]
+ 
+ans =
+ 
+[ 7.4616340628367859392546752851021*10^(-41)*i + 1.0633051173985148109357033343229, 0.46934744130074259453214833283854 - 3.7308170314183929696273376425511*10^(-41)*i]
+ 
+[M.x(3),M.y(3)]
+ 
+ans =
+ 
+[ 1.1479437019748901445007192746311*10^(-41)*i + 0.0020080646144726600421528828277988, 0.9999959676927636699789235585861 - 5.7397185098744507225035963731555*10^(-42)*i]
+ 
+[M.x(4),M.y(4)]
+{??? Error using ==> mupadmex
+Error in MuPAD command: Index exceeds matrix dimensions.
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',1366,0)">sym.sym>sym.subsref at 1366</a>
+            B = mupadmex('mllib::subsref',A.s,inds{:});
+} 
+K=solve('Y=X','Y=X^2')
+
+K = 
+
+    X: [2x1 sym]
+    Y: [2x1 sym]
+
+[K.x(1),K.y(1)]
+{??? Reference to non-existent field 'x'.
+} 
+[K.X(1),K.Y(1)]
+ 
+ans =
+ 
+[ 0, 0]
+ 
+[K.X(2),K.Y(2)]
+ 
+ans =
+ 
+[ 1, 1]
+ 
+[K.X(3),K.Y(3)]
+{??? Error using ==> mupadmex
+Error in MuPAD command: Index exceeds matrix dimensions.
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\sym.m',1366,0)">sym.sym>sym.subsref at 1366</a>
+            B = mupadmex('mllib::subsref',A.s,inds{:});
+} 
+%limites
+clear all clc
+clear all, clc
+%limites
+syms h n x
+limit((cos(x+h)-cos(x))/h,h,0)
+ 
+ans =
+ 
+-sin(x)
+ 
+limit((1-x/n)^n,n,inf)
+ 
+ans =
+ 
+1/exp(x)
+ 
+limit((1+x/n)^n,n,inf)
+ 
+ans =
+ 
+exp(x)
+ 
+limit((x/abs(x)),x,0,'left')
+ 
+ans =
+ 
+-1
+ 
+limit((x/abs(x)),x,0,'right')
+ 
+ans =
+ 
+1
+ 
+limit((x/abs(x)),x,0)
+ 
+ans =
+ 
+NaN
+ 
+ezplot(sin(1/x),[0  1])
+limit(sin(1/x),x,0,'right')
+ 
+ans =
+ 
+NaN
+ 
+limit(limit(y^2)*(x-1)^2/(y^2+(x-1)^2),x,1),y,0))
+??? limit(limit(y^2)*(x-1)^2/(y^2+(x-1)^2),x,1),y,0))
+                                                   |
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+limit(limit(y^2)*(x-1)^2/(y^2+(x-1)^2),x,1),y,0)
+??? limit(limit(y^2)*(x-1)^2/(y^2+(x-1)^2),x,1),y,0)
+                                                   |
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+limit(limit((y^2)*(x-1)^2/(y^2+(x-1)^2),x,1),y,0)
+{??? Undefined function or variable 'y'.
+} 
+syms x y
+limit(limit((y^2)*(x-1)^2/(y^2+(x-1)^2),x,1),y,0)
+ 
+ans =
+ 
+0
+ 
+ezsurf(y^2)*(x-1)^2/(y^2+(x-1)^2)
+{??? Error using ==> sym.ezsurf
+Too many output arguments.
+} 
+ezsurf((y^2)*(x-1)^2/(y^2+(x-1)^2)
+??? ezsurf((y^2)*(x-1)^2/(y^2+(x-1)^2)
+                                      |
+{Error: Expression or statement is incorrect--possibly unbalanced (, {, or [.
+} 
+ezsurf((y^2)*(x-1)^2/(y^2+(x-1)^2))
+view([-23 30])
+ezmesh((y^2)*(x-1)^2/(y^2+(x-1)^2))
+view([-23 30])
+limit((3/(x-2)),x,2,'right')
+ 
+ans =
+ 
+Inf
+ 
+diary off

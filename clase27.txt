@@ -1,0 +1,342 @@
+syms k
+symsum(1/k^2,k,1,20)
+ 
+ans =
+ 
+17299975731542641/10838475198270720
+ 
+double(ans)
+
+ans =
+
+    1.5962
+
+symsum(1/((2*k)^3-2*k),k,1,inf)
+ 
+ans =
+ 
+log(2) - 1/2
+ 
+double(ans)
+
+ans =
+
+    0.1931
+
+1/2+ans
+
+ans =
+
+    0.6931
+
+syms x
+taylor(cos(exp(x)),4)
+ 
+ans =
+ 
+- (cos(1)*x^3)/2 + (- cos(1)/2 - sin(1)/2)*x^2 - sin(1)*x + cos(1)
+ 
+symplify(ans)
+{??? Undefined function or method 'symplify' for input arguments of type 'sym'.
+} 
+simplify(ans)
+ 
+ans =
+ 
+- (cos(1)*x^3)/2 + (- cos(1)/2 - sin(1)/2)*x^2 - sin(1)*x + cos(1)
+ 
+s=taylor(exp(x),8)
+ 
+s =
+ 
+x^7/5040 + x^6/720 + x^5/120 + x^4/24 + x^3/6 + x^2/2 + x + 1
+ 
+syms z n
+ztrans(1/4^n)
+ 
+ans =
+ 
+z/(z - 1/4)
+ 
+iztrans((4*z/(4*z-1)-z^-1+5)/(6-5*z^-1+z^-2))
+ 
+ans =
+ 
+(5*(1/2)^n)/2 - 2*(1/3)^n + (1/4)^n/2
+ 
+syms x y z w
+y=fourier(cos(3*x))
+ 
+y =
+ 
+pi*(dirac(- w - 3) + dirac(3 - w))
+ 
+z=ifourier(y)
+ 
+z =
+ 
+(1/exp(3*x*i))/2 + exp(3*x*i)/2
+ 
+z1=fourier(exp(-x^2/100))
+ 
+z1 =
+ 
+(10*pi^(1/2))/exp(25*w^2)
+ 
+y=z1*exp(-4*w^2)
+ 
+y =
+ 
+(10*pi^(1/2))/exp(29*w^2)
+ 
+simplify(iztrans((4*z/(4*z-1)-z^-1+5)/(6-5*z^-1+z^-2)))
+ 
+ans =
+ 
+5*iztrans(1/(6 + 1/((1/exp(3*x*i))/2 + exp(3*x*i)/2)^2 - 5/((1/exp(3*x*i))/2 + exp(3*x*i)/2)), x, n) - iztrans(1/(1/2*exp(-3*i*x) + 1/2*exp(3*i*x))/(1/(1/2*exp(-3*i*x) + 1/2*exp(3*i*x))^2 - 5/(1/2*exp(-3*i*x) + 1/2*exp(3*i*x)) + 6), x, n) + 2*iztrans((1/exp(3*x*i))/((2*(1/exp(3*x*i)) + 2*exp(3*x*i) - 1)*(6 + 1/((1/exp(3*x*i))/2 + exp(3*x*i)/2)^2 - 5/((1/exp(3*x*i))/2 + exp(3*x*i)/2))), x, n) + 2*iztrans(exp(3*x*i)/((2*(1/exp(3*x*i)) + 2*exp(3*x*i) - 1)*(6 + 1/((1/exp(3*x*i))/2 + exp(3*x*i)/2)^2 - 5/((1/exp(3*x*i))/2 + exp(3*x*i)/2))), x, n)
+ 
+clear x
+syms x
+taylor(exp(x)+sin(x))
+ 
+ans =
+ 
+x^5/60 + x^4/24 + x^2/2 + 2*x + 1
+ 
+taylor(exp(x)+sin(x),40)
+ 
+ans =
+ 
+x^38/523022617466601111760007224100074291200000000 + x^37/6881876545613172523157989790790451200000000 + x^36/371993326789901217467999448150835200000000 + x^34/295232799039604140847618609643520000000 + x^33/4341658809405943247759097200640000000 + x^32/263130836933693530167218012160000000 + x^30/265252859812191058636308480000000 + x^29/4420880996869850977271808000000 + x^28/304888344611713860501504000000 + x^26/403291461126605635584000000 + x^25/7755605021665492992000000 + x^24/620448401733239439360000 + x^22/1124000727777607680000 + x^21/25545471085854720000 + x^20/2432902008176640000 + x^18/6402373705728000 + x^17/177843714048000 + x^16/20922789888000 + x^14/87178291200 + x^13/3113510400 + x^12/479001600 + x^10/3628800 + x^9/181440 + x^8/40320 + x^6/720 + x^5/60 + x^4/24 + x^2/2 + 2*x + 1
+ 
+taylor(sqrt(x)
+??? taylor(sqrt(x)
+                  |
+{Error: Expression or statement is incorrect--possibly unbalanced (, {, or [.
+} 
+taylor(sqrt(x),5)
+{??? Error using ==> mupadmex
+Error in MuPAD command: x^(1/2) does not have a Taylor series expansion, try
+'series' [taylor]
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\taylor.m',63,0)">sym.taylor at 63</a>
+  t = mupadmex('mllib::taylor',f.s,x.s,a.s,int2str(n));
+} 
+taylor(x^(1/2),5)
+{??? Error using ==> mupadmex
+Error in MuPAD command: x^(1/2) does not have a Taylor series expansion, try
+'series' [taylor]
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\taylor.m',63,0)">sym.taylor at 63</a>
+  t = mupadmex('mllib::taylor',f.s,x.s,a.s,int2str(n));
+} 
+taylor(x^2,5)
+ 
+ans =
+ 
+x^2
+ 
+taylor(x^2,1)
+ 
+ans =
+ 
+0
+ 
+taylor(x^2,2)
+ 
+ans =
+ 
+0
+ 
+taylor(x^2,3)
+ 
+ans =
+ 
+x^2
+ 
+taylor(log(x),3)
+{??? Error using ==> mupadmex
+Error in MuPAD command: ln(x) does not have a Taylor series expansion, try 'series'
+[taylor]
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\symbolic\symbolic\@sym\taylor.m',63,0)">sym.taylor at 63</a>
+  t = mupadmex('mllib::taylor',f.s,x.s,a.s,int2str(n));
+} 
+syms s t
+syms z n
+lapace(t^4)
+{??? Undefined function or method 'lapace' for input arguments of type 'sym'.
+} 
+clear all,clc
+syms s t z n b
+lapace(t^4)
+{??? Undefined function or method 'lapace' for input arguments of type 'sym'.
+} 
+lapace(4*t+exp(3*t))
+{??? Undefined function or method 'lapace' for input arguments of type 'sym'.
+} 
+laplace(4*t+exp(3*t))
+ 
+ans =
+ 
+1/(s - 3) + 4/s^2
+ 
+laplace(t^4)
+ 
+ans =
+ 
+24/s^5
+ 
+laplace(exp(-b*t))
+ 
+ans =
+ 
+1/(b + s)
+ 
+laplace(sin(-b*t))
+ 
+ans =
+ 
+-b/(b^2 + s^2)
+ 
+ilaplace((4/s^2+1/(s-3)-4+s)/(s^2-3*s+2))
+ 
+ans =
+ 
+2*t - 2*exp(2*t) + exp(3*t)/2 - exp(t)/2 + 3
+ 
+ilaplace(1/(s+b))
+ 
+ans =
+ 
+1/exp(b*t)
+ 
+ilaplace(b/(s^2+b^2))
+ 
+ans =
+ 
+sin(b*t)
+ 
+ilaplace(b/s*(a*s+1))
+{??? Undefined function or variable 'a'.
+} 
+syms a
+ilaplace(b/s*(a*s+1))
+ 
+ans =
+ 
+b + a*b*dirac(t)
+ 
+symplify(ans)
+{??? Undefined function or method 'symplify' for input arguments of type 'sym'.
+} 
+simplify(ans)
+ 
+ans =
+ 
+b + a*b*dirac(t)
+ 
+dirac(t)
+ 
+ans =
+ 
+dirac(t)
+ 
+t=20
+
+t =
+
+    20
+
+dirac(t)
+
+ans =
+
+     0
+
+dirac(3
+??? dirac(3
+           |
+{Error: Expression or statement is incorrect--possibly unbalanced (, {, or [.
+} 
+dirac(3)
+
+ans =
+
+     0
+
+dirac(1/2)
+
+ans =
+
+     0
+
+dirac(-i)
+
+ans =
+
+     0
+
+dirac(i)
+
+ans =
+
+     0
+
+clear all,clc
+syms s t z n b
+syms a
+ilaplace(b/s*(a*s+1))
+ 
+ans =
+ 
+b + a*b*dirac(t)
+ 
+ecdif
+{??? Error using ==> mtimes
+Inner matrix dimensions must agree.
+
+Error in ==> <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\ecdif.m',3,0)">ecdif at 3</a>
+rvec=3.*y*sin(y)+t;
+} 
+ opentoline('C:\Users\Alumnos\Documents\MATLAB\ecdif.m',3,0)
+ecdif
+crecimiento
+{??? Error using ==> vectorize
+Too many input arguments.
+
+Error in ==> <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\crecimiento.m',5,0)">crecimiento at 5</a>
+y=inline(vectorize('y0*exp(t)','t','y0'));
+} 
+ opentoline('C:\Users\Alumnos\Documents\MATLAB\crecimiento.m',5,0)
+crecimiento
+{??? Error: <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\crecimiento.m',5,41)">File: crecimiento.m Line: 5 Column: 41</a>
+Unbalanced or unexpected parenthesis or bracket.
+} 
+ opentoline('C:\Users\Alumnos\Documents\MATLAB\crecimiento.m',5,41)
+crecimiento
+{??? Error using ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\funfun\inlineeval.m',15,0)">inlineeval at 15</a>
+Error in inline expression ==> vectorize(y0*exp(t)
+ Error: Expression or statement is incorrect--possibly unbalanced (, {, or [.
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\funfun\@inline\subsref.m',27,0)">inline.subsref at 27</a>
+    INLINE_OUT_ = inlineeval(INLINE_INPUTS_, INLINE_OBJ_.inputExpr, INLINE_OBJ_.expr);
+
+Error in ==> <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\crecimiento.m',7,0)">crecimiento at 7</a>
+    explot(y(t,y0),[0 10 0 20])
+} 
+crecimiento
+{??? Error using ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\funfun\inlineeval.m',15,0)">inlineeval at 15</a>
+Error in inline expression ==> vectorize(y0*exp(t)
+ Error: Expression or statement is incorrect--possibly unbalanced (, {, or [.
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\funfun\@inline\subsref.m',27,0)">inline.subsref at 27</a>
+    INLINE_OUT_ = inlineeval(INLINE_INPUTS_, INLINE_OBJ_.inputExpr, INLINE_OBJ_.expr);
+
+Error in ==> <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\crecimiento.m',7,0)">crecimiento at 7</a>
+    ezplot(y(t,y0),[0 10 0 20])
+} 
+crecimiento
+crecimiento
+crecimiento
+diary off

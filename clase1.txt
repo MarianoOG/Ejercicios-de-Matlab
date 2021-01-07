@@ -1,0 +1,129 @@
+m=pi/2
+
+m =
+
+    1.5708
+
+exp(1)
+
+ans =
+
+    2.7183
+
+format long
+exp(3)
+
+ans =
+
+  20.085536923187668
+
+format
+exp(3)
+
+ans =
+
+   20.0855
+
+clc
+1.45e-5
+
+ans =
+
+  1.4500e-005
+
+1e5
+
+ans =
+
+      100000
+
+10^5
+
+ans =
+
+      100000
+
+eps
+
+ans =
+
+  2.2204e-016
+
+clc
+whos
+  Name      Size            Bytes  Class     Attributes
+
+  ans       1x1                 8  double              
+  m         1x1                 8  double              
+  x         1x1                 8  double              
+  y         1x1                 8  double              
+
+clc
+clear all
+whos
+x=pi/2;
+H=sin(x)^2+cos(x)^2
+
+H =
+
+     1
+
+sqrt(x)
+
+ans =
+
+    1.2533
+
+sqrt(x) %raízcuadrada
+
+ans =
+
+    1.2533
+
+1/2/3/4
+
+ans =
+
+    0.0417
+
+format rat
+1/2/3/4
+
+ans =
+
+       1/24    
+
+(1/2)/(3/4)
+
+ans =
+
+       2/3     
+
+x1=b-a/(b+(b+a)/(c*a))
+{??? Undefined function or variable 'b'.
+} 
+a=4,b=5c=-2
+??? a=4,b=5c=-2
+           |
+{Error: Unexpected MATLAB expression.
+} 
+a=4;b=5;c=-2;
+x1=b-a/(b+(b+a)/(c*a))
+
+x1 =
+
+     123/31    
+
+exp(i*pi/4)
+
+ans =
+
+     985/1393   +  985/1393i 
+
+y1=sind(45)
+
+y1 =
+
+     985/1393  
+
+diary off

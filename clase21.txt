@@ -1,0 +1,235 @@
+t=linspace(0,1);
+x=t;y=t.^2;z=t.^3;
+plot3(x,y,z,grid)
+{??? Error using ==> grid
+Too many output arguments.
+} 
+plot3(x,y,z),grid
+clear all, clc
+t=0:0.1:6*pi;
+x=sqrt(t).*sin(2*t); z=0.5*t;
+plot3(x,y,z),grid
+{??? Undefined function or variable 'y'.
+} 
+x=sqrt(t).*sin(2*t);y=sqrt(t).*cos(2*t); z=0.5*t;
+plot3(x,y,z),grid
+clear all
+clc
+t=-10*pi:pi/250:10*pi;
+comet3((cos(2*t).^2).*sin(t),(sin(2*t).^2).*cos(t),t)
+r=linspace(-3,3,50); [x,y]=meshgrid(r,r);
+z=-5./(1+x.^2+y.^2);
+contour3(z)
+surf3(z)
+{??? Undefined function or method 'surf3' for input arguments of type 'double'.
+} 
+surf3(x,y,z)
+{??? Undefined function or method 'surf3' for input arguments of type 'double'.
+} 
+surf(x,y,z)
+surf(x,y,z)
+shading flat
+clear all, clc
+u=-5:0.2:5; [x,y]=meshgrid(u,u);
+z=cos(x).*cos(y).*exp(-sqrt(x.^2+y.^2)/4);
+surf(x,y,z), shading interp
+clear all,clc
+u=-5:0.2:5; [x,y]=meshgrid(u,u);
+z=cos(x).*cos(y).*exp(-sqrt(x.^2+y.^2)/4);
+surfc(x,y,z)
+colormap hot
+shading flat
+shding interp
+{??? Undefined function or method 'shding' for input arguments of type 'char'.
+} 
+shading interp
+surfc(x,y,z)
+contour3(z)
+contour3(z)
+clear all,clc
+%-- 13/03/12 04:04 PM --%
+clear all
+clc
+x=linspace(-pi/2,pi/2,50); y=x; [x,y]=meshgrid(x,y);
+z=sin(x.^2)+sin(y.^2);
+meshz(x,y,z),axis tight
+meshz(x,y,z)
+meshz(x,y,z),axis tight
+clear all,clc
+x=linspace(-3,3-50);y=x;[x,y]=meshgrid(x,y);
+z=-5./(1+x.^2+y.^2);
+waterfall(z)
+waterfall(z)
+waterfall(z)
+shading flat
+waterfall(z)
+x=linspace(-3,3,50);y=x;[x,y]=meshgrid(x,y);
+z=-5./(1+x.^2+y.^2);
+waterfall(z)
+surf(x,y,z)
+waterfall(z)
+surfc(x,y,z)
+waterfall(z)
+clear all
+t=linspace(0,6*pi,200);x=t;y=t.*sin(t);
+z=exp(t/10)-1;
+stem3(x,y,z,'filled')
+stem3(x,y,z,)
+??? stem3(x,y,z,)
+                |
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+stem3(x,y,z)
+stem3(x,y,z,'filled')
+clear all,clc
+theta=0:0.2:2*pi;x=sin(theta);y=cos(theta);z=sin(theta);
+stem3(x,y,z),hold on
+plot3(x,y,z)
+plot(x,y)
+clear all,clc
+z=linspace(0,1,41);
+cylinder(3*(z-1/3).^2)
+hold on
+clear all
+xt=[0 1 0.5]
+
+xt =
+
+         0    1.0000    0.5000
+
+yt=[0 0 1];zt=[0 0 1];
+patch(xy,yt,zt,'y')
+{??? Undefined function or variable 'xy'.
+} 
+patch(xt,yt,zt,'y')
+view(3)
+patch(xt,yt,zt,'y')
+patch(xt,yt,zt,'y')
+view(3)
+box
+grid
+yt=[0 0 2];zt=[0 0 1];
+patch(xt,yt,zt,'y')
+yt=[0 0 3];zt=[0 0 1];
+patch(xt,yt,zt,'y')
+yt=[0 0 2];zt=[0 0 1];
+patch(xt,yt,zt,'y')
+yt=[0 0 1];zt=[0 0 1];
+patch(xt,yt,zt,'y')
+%puntos cordenadas
+clc,clear all
+x=-1:0.1:1;y=x;
+[x,y]=meshgrid(x,y);
+z=1+3*y-2*x;surf(x,y,z)
+planos3([1 5 7 11 17])
+shading flat
+clear all,clc
+resortin
+{??? Error using ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\graph2d\axis.m',234,0)">axis>LocSetLimits at 234</a>
+Vector must have 4, 6, or 8 elements.
+
+Error in ==> <a href="matlab: opentoline('C:\Program Files\MATLAB\R2010a\toolbox\matlab\graph2d\axis.m',94,0)">axis at 94</a>
+                LocSetLimits(ax(j),cur_arg);
+
+Error in ==> <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\resortin.m',10,0)">resortin at 10</a>
+    axis([-2 2 -2 2 2 0 40*pi]);
+} 
+uiopen('C:\Users\Alumnos\Documents\MATLAB\resortin.m',1)
+resortin
+resortin
+resortin
+uiopen('C:\Users\Alumnos\Documents\MATLAB\resortin.m',1)
+resortin
+uiopen('C:\Users\Alumnos\Documents\MATLAB\resortin.m',1)
+resortin
+sist3=inline('[exp(-0.002*t)-0.008*y(1)-y(1)*y(2)^2];
+??? sist3=inline('[exp(-0.002*t)-0.008*y(1)-y(1)*y(2)^2];
+                 |
+{Error: A MATLAB string constant is not terminated properly.
+} 
+sist3=inline('[exp(-0.002*t)-0.008*y(1)-y(1)*y(2)^2];...
+??? sist3=inline('[exp(-0.002*t)-0.008*y(1)-y(1)*y(2)^2];...
+                 |
+{Error: A MATLAB string constant is not terminated properly.
+} 
+sist3=inline('[exp(-0.002*t)-0.008*y(1)-y(1)*y(2)^2];0.08*y(1)-y(2)+y(1)*y(2)^2]','t','y')
+
+sist3 =
+
+     Inline function:
+     sist3(t,y) = [exp(-0.002*t)-0.008*y(1)-y(1)*y(2)^2];0.08*y(1)-y(2)+y(1)*y(2)^2]
+
+[t,yvec]=ode45(sist3,[0 250];[0,0]);
+??? [t,yvec]=ode45(sist3,[0 250];[0,0]);
+                                |
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+sist3=inline('[exp(-0.002*t)-0.08*y(1)-y(1)*y(2)^2;0.08*y(1)-y(2)+y(1)*y(2)^2]','t','y')
+
+sist3 =
+
+     Inline function:
+     sist3(t,y) = [exp(-0.002*t)-0.08*y(1)-y(1)*y(2)^2;0.08*y(1)-y(2)+y(1)*y(2)^2]
+
+[t,yvec]=ode45(sist3,[0 250];[0,0]);
+??? [t,yvec]=ode45(sist3,[0 250];[0,0]);
+                                |
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+[t,yvec]=ode45(sist3,[0 250],[0,0]);
+comet3(yvec(:,1),yvec(:,2),t),axis([0 3 0 2 0 250])
+comet3(yvec(:,1),yvec(:,2),t),axis([0 3 0 2 0 250])
+comet3(yvec(:,1),yvec(:,2),t),axis([0 3 0 2 0 250])
+comet3(yvec(:,1),yvec(:,2),t),axis([0 3 0 2 0 250])
+[x,y,z]=peaks;
+surf(x,y,z)
+surfl(x,y,z),axis tight,colormap (gray(64))
+i=find(2<=<&z<=4);
+??? i=find(2<=<&z<=4);
+              |
+{Error: Unexpected MATLAB operator.
+} 
+surfl(x,y,z),axis tight,colormap (gray(64))
+i=find(2<=<&z<=4);
+??? i=find(2<=<&z<=4);
+              |
+{Error: Unexpected MATLAB operator.
+} 
+i=find(2<=z&z<=4);
+plot3(x(i),y(i),z(i),'.')
+surfl(x,y,z),axis tight,colormap (gray(64))
+hold on
+plot3(x(i),y(i),z(i),'.')
+a
+
+a =
+
+     1
+
+
+a
+
+a =
+
+     1
+
+ba
+uiopen('C:\Users\Alumnos\Documents\MATLAB\ba.m',1)
+ba
+{??? Operation terminated by user during ==> <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\ba.m',8,0)">ba at 8</a>
+} 
+[x,y,z,v]=flow;figure(1);clf
+isosurface(x,y,z,v,-3)
+clear all,clc
+complejos
+{??? Error: <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\complejos.m',3,40)">File: complejos.m Line: 3 Column: 40</a>
+Unbalanced or unexpected parenthesis or bracket.
+} 
+complejos
+{??? Undefined function or variable 'W'.
+
+Error in ==> <a href="matlab: opentoline('C:\Users\Alumnos\Documents\MATLAB\complejos.m',13,0)">complejos at 13</a>
+pcolor(W);
+} 
+complejos
+diary off

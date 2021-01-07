@@ -1,0 +1,1741 @@
+%creamos un vector
+vec1=[1/2 1/3 pi sqrt(2)];
+format short;s
+{??? Undefined function or variable 's'.
+} 
+format short; s
+{??? Undefined function or variable 's'.
+} 
+format short; vec1
+
+vec1 =
+
+    0.5000    0.3333    3.1416    1.4142
+
+format long; vec1
+
+vec1 =
+
+   0.500000000000000   0.333333333333333   3.141592653589793   1.414213562373095
+
+format rat ; vec1
+
+vec1 =
+
+       1/2            1/3          355/113       1393/985   
+
+format short e; vec1
+
+vec1 =
+
+  5.0000e-001  3.3333e-001  3.1416e+000  1.4142e+000
+
+format
+45e9
+
+ans =
+
+  4.5000e+010
+
+clear all % Borra todas las varaibles previas
+so=390; vo=8; t=2; a=-386;
+s=so+vo*t+0.5*a*t^2
+
+s =
+
+  -366
+
+isvarname eps
+
+ans =
+
+     1
+
+isvarname p
+
+ans =
+
+     1
+
+isvarname r
+
+ans =
+
+     1
+
+realmax
+
+ans =
+
+  1.7977e+308
+
+realmin
+
+ans =
+
+  2.2251e-308
+
+2*realmax
+
+ans =
+
+   Inf
+
+3^10/10
+
+ans =
+
+  5.9049e+003
+
+1+2/3*4
+
+ans =
+
+    3.6667
+
+1+2/(3*4)
+
+ans =
+
+    1.1667
+
+[2^2^3 2^(2^3)]
+
+ans =
+
+    64   256
+
+%Vector es un arreglo unidimensional de números o valores lógicos situado en
+% una fila o una columna
+% Los elementos de un vector tienen dos atributos: su valor númerico
+% y su poscico´n en el vector (dirección)
+% Los paréntesis cuadrados [] crean un vector 
+%Los paréntesis redondos () permiten modificar un vector
+% 
+% un vector admite valores conocidos (números)
+% variables predefinidas 
+% funciones (sqrt (2), etc)
+% expresiones matemáticas
+A1=[3 5 9 2 7 25 pi]
+
+A1 =
+
+    3.0000    5.0000    9.0000    2.0000    7.0000   25.0000    3.1416
+
+%consultamos el cuarto elemento del vector A1
+A1(4)
+
+ans =
+
+     2
+
+%Asignamos un nuevo valor al elemento 2
+A1(2)=275
+
+A1 =
+
+    3.0000  275.0000    9.0000    2.0000    7.0000   25.0000    3.1416
+
+%Asignamos un nuevo valor al elemento 5
+A1(5)=A1(3)+A1(6)
+
+A1 =
+
+    3.0000  275.0000    9.0000    2.0000   34.0000   25.0000    3.1416
+
+%saber la longitud de un vector (num de elementos que hay)
+length(A1)
+
+ans =
+
+     7
+
+a=A1(end)
+
+a =
+
+    3.1416
+
+%otra forma de generar un vector es usar el operador :
+A3= 1:9
+
+A3 =
+
+     1     2     3     4     5     6     7     8     9
+
+A4= -7:2:8
+
+A4 =
+
+    -7    -5    -3    -1     1     3     5     7
+
+A5= 0.1:0.2:2
+
+A5 =
+
+  Columns 1 through 8
+
+    0.1000    0.3000    0.5000    0.7000    0.9000    1.1000    1.3000    1.5000
+
+  Columns 9 through 10
+
+    1.7000    1.9000
+
+A6= 70:-2:56
+
+A6 =
+
+    70    68    66    64    62    60    58    56
+
+A7 = 1:150;
+A8=[pi:pi/6:2*pi]
+
+A8 =
+
+    3.1416    3.6652    4.1888    4.7124    5.2360    5.7596    6.2832
+
+B1=linspace(0,2,16) %0 inicio  2 final del rango 
+
+B1 =
+
+  Columns 1 through 8
+
+         0    0.1333    0.2667    0.4000    0.5333    0.6667    0.8000    0.9333
+
+  Columns 9 through 16
+
+    1.0667    1.2000    1.3333    1.4667    1.6000    1.7333    1.8667    2.0000
+
+%16 el número de elemenetos
+length(B1)
+
+ans =
+
+    16
+
+%subvectores
+B2=A7(1:10)
+
+B2 =
+
+     1     2     3     4     5     6     7     8     9    10
+
+B3=A7(end-5:end)
+
+B3 =
+
+   145   146   147   148   149   150
+
+B4=A8(end/2:end)
+{Warning: Integer operands are required for colon operator when used as index} 
+
+B4 =
+
+    4.7124    5.2360    5.7596    6.2832
+
+length(B4)
+
+ans =
+
+     4
+
+A9=linspace(pi, 2*pi, 7)
+
+A9 =
+
+    3.1416    3.6652    4.1888    4.7124    5.2360    5.7596    6.2832
+
+format long
+A9=linspace(pi, 2*pi, 7)
+
+A9 =
+
+  Columns 1 through 4
+
+   3.141592653589793   3.665191429188092   4.188790204786391   4.712388980384690
+
+  Columns 5 through 7
+
+   5.235987755982988   5.759586531581288   6.283185307179586
+
+A9=linspace(pi, 2*pi, 6)
+
+A9 =
+
+  Columns 1 through 4
+
+   3.141592653589793   3.769911184307752   4.398229715025710   5.026548245743669
+
+  Columns 5 through 6
+
+   5.654866776461628   6.283185307179586
+
+A8
+
+A8 =
+
+  Columns 1 through 4
+
+   3.141592653589793   3.665191429188092   4.188790204786391   4.712388980384690
+
+  Columns 5 through 7
+
+   5.235987755982989   5.759586531581287   6.283185307179586
+
+A10=linspace(0, pi, 8)
+
+A10 =
+
+  Columns 1 through 4
+
+                   0   0.448798950512828   0.897597901025655   1.346396851538483
+
+  Columns 5 through 8
+
+   1.795195802051310   2.243994752564138   2.692793703076966   3.141592653589793
+
+B5=A10 (end/2:end)
+
+B5 =
+
+  Columns 1 through 4
+
+   1.346396851538483   1.795195802051310   2.243994752564138   2.692793703076966
+
+  Column 5
+
+   3.141592653589793
+
+B6=A10(end/2:end-1)
+
+B6 =
+
+   1.346396851538483   1.795195802051310   2.243994752564138   2.692793703076966
+
+A10(12)=209
+
+A10 =
+
+  1.0e+002 *
+
+  Columns 1 through 4
+
+                   0   0.004487989505128   0.008975979010257   0.013463968515385
+
+  Columns 5 through 8
+
+   0.017951958020513   0.022439947525641   0.026927937030770   0.031415926535898
+
+  Columns 9 through 12
+
+                   0                   0                   0   2.090000000000000
+
+C1=linsapce(0, 3*pi)
+{??? Undefined function or method 'linsapce' for input arguments of type 'double'.
+} 
+C1= linsapce(0,3*pi) 
+{??? Undefined function or method 'linsapce' for input arguments of type 'double'.
+} 
+C1=linspace(0, 3*pi)
+
+C1 =
+
+  Columns 1 through 4
+
+                   0   0.095199777381509   0.190399554763018   0.285599332144527
+
+  Columns 5 through 8
+
+   0.380799109526036   0.475998886907544   0.571198664289053   0.666398441670562
+
+  Columns 9 through 12
+
+   0.761598219052071   0.856797996433580   0.951997773815089   1.047197551196598
+
+  Columns 13 through 16
+
+   1.142397328578107   1.237597105959615   1.332796883341124   1.427996660722633
+
+  Columns 17 through 20
+
+   1.523196438104142   1.618396215485651   1.713595992867160   1.808795770248669
+
+  Columns 21 through 24
+
+   1.903995547630178   1.999195325011687   2.094395102393195   2.189594879774704
+
+  Columns 25 through 28
+
+   2.284794657156213   2.379994434537722   2.475194211919231   2.570393989300740
+
+  Columns 29 through 32
+
+   2.665593766682249   2.760793544063757   2.855993321445267   2.951193098826775
+
+  Columns 33 through 36
+
+   3.046392876208284   3.141592653589794   3.236792430971302   3.331992208352811
+
+  Columns 37 through 40
+
+   3.427191985734320   3.522391763115829   3.617591540497337   3.712791317878847
+
+  Columns 41 through 44
+
+   3.807991095260355   3.903190872641864   3.998390650023374   4.093590427404882
+
+  Columns 45 through 48
+
+   4.188790204786391   4.283989982167900   4.379189759549409   4.474389536930917
+
+  Columns 49 through 52
+
+   4.569589314312426   4.664789091693936   4.759988869075444   4.855188646456953
+
+  Columns 53 through 56
+
+   4.950388423838461   5.045588201219971   5.140787978601479   5.235987755982988
+
+  Columns 57 through 60
+
+   5.331187533364497   5.426387310746006   5.521587088127514   5.616786865509025
+
+  Columns 61 through 64
+
+   5.711986642890533   5.807186420272042   5.902386197653550   5.997585975035060
+
+  Columns 65 through 68
+
+   6.092785752416568   6.187985529798077   6.283185307179587   6.378385084561096
+
+  Columns 69 through 72
+
+   6.473584861942604   6.568784639324113   6.663984416705622   6.759184194087131
+
+  Columns 73 through 76
+
+   6.854383971468639   6.949583748850149   7.044783526231657   7.139983303613166
+
+  Columns 77 through 80
+
+   7.235183080994674   7.330382858376185   7.425582635757693   7.520782413139202
+
+  Columns 81 through 84
+
+   7.615982190520710   7.711181967902220   7.806381745283728   7.901581522665237
+
+  Columns 85 through 88
+
+   7.996781300046747   8.091981077428255   8.187180854809764   8.282380632191272
+
+  Columns 89 through 92
+
+   8.377580409572781   8.472780186954291   8.567979964335800   8.663179741717309
+
+  Columns 93 through 96
+
+   8.758379519098817   8.853579296480326   8.948779073861834   9.043978851243343
+
+  Columns 97 through 100
+
+   9.139178628624853   9.234378406006361   9.329578183387872   9.424777960769379
+
+whos
+  Name      Size             Bytes  Class     Attributes
+
+  A1        1x7                 56  double              
+  A10       1x12                96  double              
+  A3        1x9                 72  double              
+  A4        1x8                 64  double              
+  A5        1x10                80  double              
+  A6        1x8                 64  double              
+  A7        1x150             1200  double              
+  A8        1x7                 56  double              
+  A9        1x6                 48  double              
+  B1        1x16               128  double              
+  B2        1x10                80  double              
+  B3        1x6                 48  double              
+  B4        1x4                 32  double              
+  B5        1x5                 40  double              
+  B6        1x4                 32  double              
+  C1        1x100              800  double              
+  a         1x1                  8  double              
+  ans       1x1                  8  double              
+  s         1x1                  8  double              
+  so        1x1                  8  double              
+  t         1x1                  8  double              
+  vo        1x1                  8  double              
+
+clear B6
+whos
+  Name      Size             Bytes  Class     Attributes
+
+  A1        1x7                 56  double              
+  A10       1x12                96  double              
+  A3        1x9                 72  double              
+  A4        1x8                 64  double              
+  A5        1x10                80  double              
+  A6        1x8                 64  double              
+  A7        1x150             1200  double              
+  A8        1x7                 56  double              
+  A9        1x6                 48  double              
+  B1        1x16               128  double              
+  B2        1x10                80  double              
+  B3        1x6                 48  double              
+  B4        1x4                 32  double              
+  B5        1x5                 40  double              
+  C1        1x100              800  double              
+  a         1x1                  8  double              
+  ans       1x1                  8  double              
+  s         1x1                  8  double              
+  so        1x1                  8  double              
+  t         1x1                  8  double              
+  vo        1x1                  8  double              
+
+clear all % borra todas las variables
+A10
+{??? Undefined function or variable 'A10'.
+} 
+A10=linspace(0, pi, 8)
+
+A10 =
+
+  Columns 1 through 4
+
+                   0   0.448798950512828   0.897597901025655   1.346396851538483
+
+  Columns 5 through 8
+
+   1.795195802051310   2.243994752564138   2.692793703076966   3.141592653589793
+
+A11=A10(2)+A10(4)*2
+
+A11 =
+
+   3.141592653589793
+
+pi/7+2(3pi)/7
+??? pi/7+2(3pi)/7
+          |
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+pi/7+2(3pi)/7=
+??? pi/7+2(3pi)/7=
+          |
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+A12=1:15
+
+A12 =
+
+  Columns 1 through 14
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13    14
+
+  Column 15
+
+    15
+
+B13=A12(2:2:end)
+
+B13 =
+
+     2     4     6     8    10    12    14
+
+ve1=[25 18 -4 17 19 57 51]
+
+ve1 =
+
+    25    18    -4    17    19    57    51
+
+ve1(10)=120
+
+ve1 =
+
+    25    18    -4    17    19    57    51     0     0   120
+
+% creamos otro vector a partir de posiciones especificas
+ve4=ve1([3, 5, 7:10])
+
+ve4 =
+
+    -4    19    51     0     0   120
+
+ve4=ve1([3, 5, 7:10])
+
+ve4 =
+
+    -4    19    51     0     0   120
+
+ve5=ve1([1:3, 6, 8:end])
+
+ve5 =
+
+    25    18    -4    57     0     0   120
+
+vec6=[1 2 3 5 7, ve1]
+
+vec6 =
+
+  Columns 1 through 14
+
+     1     2     3     5     7    25    18    -4    17    19    57    51     0     0
+
+  Column 15
+
+   120
+
+vec6'
+
+ans =
+
+     1
+     2
+     3
+     5
+     7
+    25
+    18
+    -4
+    17
+    19
+    57
+    51
+     0
+     0
+   120
+
+ve7=2*ve6(2:6)
+{??? Undefined function or method 've6' for input arguments of type 'double'.
+} 
+ve7=2*vec6(2:6)
+
+ve7 =
+
+     4     6    10    14    50
+
+clear all, clc
+am2=10:2:34
+
+am2 =
+
+    10    12    14    16    18    20    22    24    26    28    30    32    34
+
+bm4=am2 ([2*i, 3*i, 7:10])
+{??? Subscript indices must either be real positive integers or logicals.
+} 
+i=2
+
+i =
+
+     2
+
+bm4=am2 ([2*i, 3*i, 7:10])
+
+bm4 =
+
+    16    20    22    24    26    28
+
+RE=[3 8 2 25]; GT=4:3:16;
+RTH=[RE GT] % fila
+
+RTH =
+
+     3     8     2    25     4     7    10    13    16
+
+RTV=[RE'; GT'] % columna
+
+RTV =
+
+     3
+     8
+     2
+    25
+     4
+     7
+    10
+    13
+    16
+
+am2
+
+am2 =
+
+    10    12    14    16    18    20    22    24    26    28    30    32    34
+
+am2(3)=[] %borra el elemento 3
+
+am2 =
+
+    10    12    16    18    20    22    24    26    28    30    32    34
+
+am2(2:2:end)=[]
+
+am2 =
+
+    10    16    20    24    28    32
+
+%Matlab trabaja por default las operaciones del algebra lineal
+mb1=1:6
+
+mb1 =
+
+     1     2     3     4     5     6
+
+tb1=6:-1:1
+
+tb1 =
+
+     6     5     4     3     2     1
+
+%las operaciones elemento por elemento usan .
+mb1+tb1
+
+ans =
+
+     7     7     7     7     7     7
+
+mb1-tb1
+
+ans =
+
+    -5    -3    -1     1     3     5
+
+mb1.*tb1
+
+ans =
+
+     6    10    12    12    10     6
+
+mb1*tb1
+{??? Error using ==> mtimes
+Inner matrix dimensions must agree.
+} 
+mb1./tb1
+
+ans =
+
+  Columns 1 through 4
+
+   0.166666666666667   0.400000000000000   0.750000000000000   1.333333333333333
+
+  Columns 5 through 6
+
+   2.500000000000000   6.000000000000000
+
+mb1.^2
+
+ans =
+
+     1     4     9    16    25    36
+
+1./mb1
+
+ans =
+
+  Columns 1 through 4
+
+   1.000000000000000   0.500000000000000   0.333333333333333   0.250000000000000
+
+  Columns 5 through 6
+
+   0.200000000000000   0.166666666666667
+
+mb1/2
+
+ans =
+
+  Columns 1 through 4
+
+   0.500000000000000   1.000000000000000   1.500000000000000   2.000000000000000
+
+  Columns 5 through 6
+
+   2.500000000000000   3.000000000000000
+
+mb1+1
+
+ans =
+
+     2     3     4     5     6     7
+
+mb1-2*tb1
+
+ans =
+
+   -11    -8    -5    -2     1     4
+
+tb1+2
+
+ans =
+
+     8     7     6     5     4     3
+
+tb1.^2
+
+ans =
+
+    36    25    16     9     4     1
+
+tb1^2
+{??? Error using ==> mpower
+Inputs must be a scalar and a square matrix.
+} 
+celar all, clc
+{??? Undefined function or method 'celar' for input arguments of type 'char'.
+} 
+clear all, clc
+x=[1 3 4 5 67 23 12 1 3 4 45 23 -4]
+
+x =
+
+     1     3     4     5    67    23    12     1     3     4    45    23    -4
+
+max(x)
+
+ans =
+
+    67
+
+[a b]=max (x)
+
+a =
+
+    67
+
+
+b =
+
+     5
+
+min(x) % [c d]= min(x)
+
+ans =
+
+    -4
+
+mean (x)
+
+ans =
+
+  14.384615384615385
+
+median(x)
+
+ans =
+
+     4
+
+sum(x)
+
+ans =
+
+   187
+
+sort(x)
+
+ans =
+
+    -4     1     1     3     3     4     4     5    12    23    23    45    67
+
+x>=4
+
+ans =
+
+     0     0     1     1     1     1     1     0     0     1     1     1     0
+
+% 0, 1 son valores lógicos   0 falso    1 verdadero
+find (x>10)
+
+ans =
+
+     5     6     7    11    12
+
+diary off
+%vector fila
+x=[1 3 9 17 -4 pi Inf -4 sqrt(10)]
+
+x =
+
+  Columns 1 through 8
+
+    1.0000    3.0000    9.0000   17.0000   -4.0000    3.1416       Inf   -4.0000
+
+  Column 9
+
+    3.1623
+
+y=x';% y se convierte en vector columna
+x1=1:15
+
+x1 =
+
+  Columns 1 through 14
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13    14
+
+  Column 15
+
+    15
+
+x2=-20:2:10 %-20(inicio),10(final),2 espaciamiento
+
+x2 =
+
+  Columns 1 through 14
+
+   -20   -18   -16   -14   -12   -10    -8    -6    -4    -2     0     2     4     6
+
+  Columns 15 through 16
+
+     8    10
+
+length(x2) % para saber el tamaño del vector
+
+ans =
+
+    16
+
+x3= -4:0.5:2.7
+
+x3 =
+
+  Columns 1 through 8
+
+   -4.0000   -3.5000   -3.0000   -2.5000   -2.0000   -1.5000   -1.0000   -0.5000
+
+  Columns 9 through 14
+
+         0    0.5000    1.0000    1.5000    2.0000    2.5000
+
+x3(2)
+
+ans =
+
+   -3.5000
+
+% eso fue para consultar la posicion en ese vector
+x4=pi:pi/6:2*pi
+
+x4 =
+
+    3.1416    3.6652    4.1888    4.7124    5.2360    5.7596    6.2832
+
+y1=lenght(x4)
+{??? Undefined function or method 'lenght' for input arguments of type 'double'.
+} 
+y1=length(x4)
+
+y1 =
+
+     7
+
+clc
+x5=linspace(pi,2*pi,6)%pi es el inicio 2pi es el final y 6 es el numero de elementos
+
+x5 =
+
+    3.1416    3.7699    4.3982    5.0265    5.6549    6.2832
+
+format long
+x4=pi:pi/6:2*pi
+
+x4 =
+
+  Columns 1 through 4
+
+   3.141592653589793   3.665191429188092   4.188790204786391   4.712388980384690
+
+  Columns 5 through 7
+
+   5.235987755982989   5.759586531581287   6.283185307179586
+
+x7=linspace(pi,2*pi,7)%pi es el inicio 2pi es el final y 6 es el numero de elementos
+
+x7 =
+
+  Columns 1 through 4
+
+   3.141592653589793   3.665191429188092   4.188790204786391   4.712388980384690
+
+  Columns 5 through 7
+
+   5.235987755982988   5.759586531581288   6.283185307179586
+
+%linspace es para crear un vector espaciado
+a1=linspace(0,1,10)
+
+a1 =
+
+  Columns 1 through 4
+
+                   0   0.111111111111111   0.222222222222222   0.333333333333333
+
+  Columns 5 through 8
+
+   0.444444444444444   0.555555555555556   0.666666666666667   0.777777777777778
+
+  Columns 9 through 10
+
+   0.888888888888889   1.000000000000000
+
+format
+a2=linspace(0,pi)% 100 elementos
+
+a2 =
+
+  Columns 1 through 8
+
+         0    0.0317    0.0635    0.0952    0.1269    0.1587    0.1904    0.2221
+
+  Columns 9 through 16
+
+    0.2539    0.2856    0.3173    0.3491    0.3808    0.4125    0.4443    0.4760
+
+  Columns 17 through 24
+
+    0.5077    0.5395    0.5712    0.6029    0.6347    0.6664    0.6981    0.7299
+
+  Columns 25 through 32
+
+    0.7616    0.7933    0.8251    0.8568    0.8885    0.9203    0.9520    0.9837
+
+  Columns 33 through 40
+
+    1.0155    1.0472    1.0789    1.1107    1.1424    1.1741    1.2059    1.2376
+
+  Columns 41 through 48
+
+    1.2693    1.3011    1.3328    1.3645    1.3963    1.4280    1.4597    1.4915
+
+  Columns 49 through 56
+
+    1.5232    1.5549    1.5867    1.6184    1.6501    1.6819    1.7136    1.7453
+
+  Columns 57 through 64
+
+    1.7771    1.8088    1.8405    1.8723    1.9040    1.9357    1.9675    1.9992
+
+  Columns 65 through 72
+
+    2.0309    2.0627    2.0944    2.1261    2.1579    2.1896    2.2213    2.2531
+
+  Columns 73 through 80
+
+    2.2848    2.3165    2.3483    2.3800    2.4117    2.4435    2.4752    2.5069
+
+  Columns 81 through 88
+
+    2.5387    2.5704    2.6021    2.6339    2.6656    2.6973    2.7291    2.7608
+
+  Columns 89 through 96
+
+    2.7925    2.8243    2.8560    2.8877    2.9195    2.9512    2.9829    3.0147
+
+  Columns 97 through 100
+
+    3.0464    3.0781    3.1099    3.1416
+
+clc
+a3[9;11;17;19]%vector columna
+??? a3[9;11;17;19]%vector columna
+      |
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+a3=[9;11;17;19]%vector columna
+
+a3 =
+
+     9
+    11
+    17
+    19
+
+a=4,b=3;
+
+a =
+
+     4
+
+E4=[a,b+a,b^3,aqrt(a+b),16+a]
+{??? Undefined function or method 'aqrt' for input arguments of type 'double'.
+} 
+E4=[a,b+a,b^3,sqrt(a+b),16+a]
+
+E4 =
+
+    4.0000    7.0000   27.0000    2.6458   20.0000
+
+E4(12)
+{??? Index exceeds matrix dimensions.
+} 
+E4(12)=7+a%como excede el numero de elementos le agregamos 'a' 
+
+E4 =
+
+  Columns 1 through 8
+
+    4.0000    7.0000   27.0000    2.6458   20.0000         0         0         0
+
+  Columns 9 through 12
+
+         0         0         0   11.0000
+
+clcl
+{??? Undefined function or variable 'clcl'.
+} 
+clc
+whos %num de var creadas y su info
+  Name      Size             Bytes  Class     Attributes
+
+  E4        1x12                96  double              
+  a         1x1                  8  double              
+  a1        1x10                80  double              
+  a2        1x100              800  double              
+  a3        4x1                 32  double              
+  ans       1x1                  8  double              
+  b         1x1                  8  double              
+  x         1x9                 72  double              
+  x1        1x15               120  double              
+  x2        1x16               128  double              
+  x3        1x14               112  double              
+  x4        1x7                 56  double              
+  x5        1x6                 48  double              
+  x7        1x7                 56  double              
+  y         9x1                 72  double              
+  y1        1x1                  8  double              
+
+clear a
+clear all
+a2=linspace(0,pi);% 100 elementos
+whos %num de var creadas y su info
+  Name      Size             Bytes  Class     Attributes
+
+  a2        1x100              800  double              
+
+a2(1:10)=[]
+
+a2 =
+
+  Columns 1 through 8
+
+    0.3173    0.3491    0.3808    0.4125    0.4443    0.4760    0.5077    0.5395
+
+  Columns 9 through 16
+
+    0.5712    0.6029    0.6347    0.6664    0.6981    0.7299    0.7616    0.7933
+
+  Columns 17 through 24
+
+    0.8251    0.8568    0.8885    0.9203    0.9520    0.9837    1.0155    1.0472
+
+  Columns 25 through 32
+
+    1.0789    1.1107    1.1424    1.1741    1.2059    1.2376    1.2693    1.3011
+
+  Columns 33 through 40
+
+    1.3328    1.3645    1.3963    1.4280    1.4597    1.4915    1.5232    1.5549
+
+  Columns 41 through 48
+
+    1.5867    1.6184    1.6501    1.6819    1.7136    1.7453    1.7771    1.8088
+
+  Columns 49 through 56
+
+    1.8405    1.8723    1.9040    1.9357    1.9675    1.9992    2.0309    2.0627
+
+  Columns 57 through 64
+
+    2.0944    2.1261    2.1579    2.1896    2.2213    2.2531    2.2848    2.3165
+
+  Columns 65 through 72
+
+    2.3483    2.3800    2.4117    2.4435    2.4752    2.5069    2.5387    2.5704
+
+  Columns 73 through 80
+
+    2.6021    2.6339    2.6656    2.6973    2.7291    2.7608    2.7925    2.8243
+
+  Columns 81 through 88
+
+    2.8560    2.8877    2.9195    2.9512    2.9829    3.0147    3.0464    3.0781
+
+  Columns 89 through 90
+
+    3.1099    3.1416
+
+%borra los primeros 10 elementos tel vector
+length(a2)
+
+ans =
+
+    90
+
+a2(2:2:20)% borra de dos en dos sta el 20
+
+ans =
+
+  Columns 1 through 8
+
+    0.3491    0.4125    0.4760    0.5395    0.6029    0.6664    0.7299    0.7933
+
+  Columns 9 through 10
+
+    0.8568    0.9203
+
+a2=linspace(0,pi);% 100 elementos
+a2(1:10)=[]
+
+a2 =
+
+  Columns 1 through 8
+
+    0.3173    0.3491    0.3808    0.4125    0.4443    0.4760    0.5077    0.5395
+
+  Columns 9 through 16
+
+    0.5712    0.6029    0.6347    0.6664    0.6981    0.7299    0.7616    0.7933
+
+  Columns 17 through 24
+
+    0.8251    0.8568    0.8885    0.9203    0.9520    0.9837    1.0155    1.0472
+
+  Columns 25 through 32
+
+    1.0789    1.1107    1.1424    1.1741    1.2059    1.2376    1.2693    1.3011
+
+  Columns 33 through 40
+
+    1.3328    1.3645    1.3963    1.4280    1.4597    1.4915    1.5232    1.5549
+
+  Columns 41 through 48
+
+    1.5867    1.6184    1.6501    1.6819    1.7136    1.7453    1.7771    1.8088
+
+  Columns 49 through 56
+
+    1.8405    1.8723    1.9040    1.9357    1.9675    1.9992    2.0309    2.0627
+
+  Columns 57 through 64
+
+    2.0944    2.1261    2.1579    2.1896    2.2213    2.2531    2.2848    2.3165
+
+  Columns 65 through 72
+
+    2.3483    2.3800    2.4117    2.4435    2.4752    2.5069    2.5387    2.5704
+
+  Columns 73 through 80
+
+    2.6021    2.6339    2.6656    2.6973    2.7291    2.7608    2.7925    2.8243
+
+  Columns 81 through 88
+
+    2.8560    2.8877    2.9195    2.9512    2.9829    3.0147    3.0464    3.0781
+
+  Columns 89 through 90
+
+    3.1099    3.1416
+
+a2(2:2:20)=[]
+
+a2 =
+
+  Columns 1 through 8
+
+    0.3173    0.3808    0.4443    0.5077    0.5712    0.6347    0.6981    0.7616
+
+  Columns 9 through 16
+
+    0.8251    0.8885    0.9520    0.9837    1.0155    1.0472    1.0789    1.1107
+
+  Columns 17 through 24
+
+    1.1424    1.1741    1.2059    1.2376    1.2693    1.3011    1.3328    1.3645
+
+  Columns 25 through 32
+
+    1.3963    1.4280    1.4597    1.4915    1.5232    1.5549    1.5867    1.6184
+
+  Columns 33 through 40
+
+    1.6501    1.6819    1.7136    1.7453    1.7771    1.8088    1.8405    1.8723
+
+  Columns 41 through 48
+
+    1.9040    1.9357    1.9675    1.9992    2.0309    2.0627    2.0944    2.1261
+
+  Columns 49 through 56
+
+    2.1579    2.1896    2.2213    2.2531    2.2848    2.3165    2.3483    2.3800
+
+  Columns 57 through 64
+
+    2.4117    2.4435    2.4752    2.5069    2.5387    2.5704    2.6021    2.6339
+
+  Columns 65 through 72
+
+    2.6656    2.6973    2.7291    2.7608    2.7925    2.8243    2.8560    2.8877
+
+  Columns 73 through 80
+
+    2.9195    2.9512    2.9829    3.0147    3.0464    3.0781    3.1099    3.1416
+
+%Este si los borra el anterior quien sabe q hizo xD borra de dos en dos sta el 20
+b2=a2(50:2:end)
+
+b2 =
+
+  Columns 1 through 8
+
+    2.1896    2.2531    2.3165    2.3800    2.4435    2.5069    2.5704    2.6339
+
+  Columns 9 through 16
+
+    2.6973    2.7608    2.8243    2.8877    2.9512    3.0147    3.0781    3.1416
+
+b3=a2(end/:2:end)%parte el total de elementos en dos para comenzar desde la mitad de a2
+??? b3=a2(end/:2:end)%parte el total de elementos en dos para comenzar desde la mitad de a2
+              |
+{Error: Unexpected MATLAB operator.
+} 
+b3=a2(end/2:2:end)%parte el total de elementos en dos para comenzar desde la mitad de a2
+
+b3 =
+
+  Columns 1 through 8
+
+    1.8723    1.9357    1.9992    2.0627    2.1261    2.1896    2.2531    2.3165
+
+  Columns 9 through 16
+
+    2.3800    2.4435    2.5069    2.5704    2.6339    2.6973    2.7608    2.8243
+
+  Columns 17 through 21
+
+    2.8877    2.9512    3.0147    3.0781    3.1416
+
+length(b3)
+
+ans =
+
+    21
+
+ve1=[25 18 -4 17 19 57 51];
+ve1(6)
+
+ans =
+
+    57
+
+ve1(5)=254
+
+ve1 =
+
+    25    18    -4    17   254    57    51
+
+ve1
+
+ve1 =
+
+    25    18    -4    17   254    57    51
+
+clc
+ve2=ev1(2)+ve(4)*2
+{??? Undefined function or method 'ev1' for input arguments of type 'double'.
+} 
+ve2=ve1(2)+ve(4)*2
+{??? Undefined function or method 've' for input arguments of type 'double'.
+} 
+clc
+ve2=ve1(2)+ve1(4)*2
+
+ve2 =
+
+    52
+
+ve1(14)=250
+
+ve1 =
+
+    25    18    -4    17   254    57    51     0     0     0     0     0     0   250
+
+ve4=([3,5,7:10])
+
+ve4 =
+
+     3     5     7     8     9    10
+
+%eso fue para seleccionar posiciones especificas
+ve5=ve1([1:3,6,8:end])
+
+ve5 =
+
+    25    18    -4    57     0     0     0     0     0     0   250
+
+ve7=2*ve1(2:6)
+
+ve7 =
+
+    36    -8    34   508   114
+
+ve6=[1 2 3 5 7,ve1]
+
+ve6 =
+
+  Columns 1 through 14
+
+     1     2     3     5     7    25    18    -4    17   254    57    51     0     0
+
+  Columns 15 through 19
+
+     0     0     0     0   250
+
+%crea un vector y al final le agrega otro
+ve6=[1 2 3 5 7 ve1]
+
+ve6 =
+
+  Columns 1 through 14
+
+     1     2     3     5     7    25    18    -4    17   254    57    51     0     0
+
+  Columns 15 through 19
+
+     0     0     0     0   250
+
+ve6=[ve1 1 2 3 5 7]
+
+ve6 =
+
+  Columns 1 through 14
+
+    25    18    -4    17   254    57    51     0     0     0     0     0     0   250
+
+  Columns 15 through 19
+
+     1     2     3     5     7
+
+clear all
+clc
+i=2;
+bm2=10:2:34
+
+bm2 =
+
+    10    12    14    16    18    20    22    24    26    28    30    32    34
+
+am2=bm2([2*i,3*i,8:10])
+
+am2 =
+
+    16    20    24    26    28
+
+% de la posicion 4 y va de 5 en 5 eso creo xD
+RE=[3 8 2 25]
+
+RE =
+
+     3     8     2    25
+
+RTV=[RE GT]
+{??? Undefined function or variable 'GT'.
+} 
+RTV=[RE';GT']
+{??? Undefined function or variable 'GT'.
+} 
+clc
+RE=[3 8 2 25];GT=4:3:16
+
+GT =
+
+     4     7    10    13    16
+
+RTV=[RE GT]
+
+RTV =
+
+     3     8     2    25     4     7    10    13    16
+
+RTV=[RE';GT']
+
+RTV =
+
+     3
+     8
+     2
+    25
+     4
+     7
+    10
+    13
+    16
+
+clear all
+A=1:10
+
+A =
+
+     1     2     3     4     5     6     7     8     9    10
+
+B=A.^2
+
+B =
+
+     1     4     9    16    25    36    49    64    81   100
+
+C=A+3
+
+C =
+
+     4     5     6     7     8     9    10    11    12    13
+
+D=A./2
+
+D =
+
+  Columns 1 through 8
+
+    0.5000    1.0000    1.5000    2.0000    2.5000    3.0000    3.5000    4.0000
+
+  Columns 9 through 10
+
+    4.5000    5.0000
+
+%.* ./ .^ operaciones elemento por elemento
+% para algebra lineal
+% como son vectores opera elemento a elemento
+E=A.*2
+
+E =
+
+     2     4     6     8    10    12    14    16    18    20
+
+clc
+clear all
+%comparaciones entre vectores  o algo asi :P
+A=1:10
+
+A =
+
+     1     2     3     4     5     6     7     8     9    10
+
+A>=4
+
+ans =
+
+     0     0     0     1     1     1     1     1     1     1
+
+%cero falso 1 verdadero
+A(A>=4)
+
+ans =
+
+     4     5     6     7     8     9    10
+
+%muestra solo los q son mayores o iguales a 4
+b1=A(A>=4)
+
+b1 =
+
+     4     5     6     7     8     9    10
+
+b=[0 6 9 3 2]
+
+b =
+
+     0     6     9     3     2
+
+d=[1 5 8 4 3]
+
+d =
+
+     1     5     8     4     3
+
+a>=b
+{??? Undefined function or variable 'a'.
+} 
+A>=b
+{??? Error using ==> ge
+Matrix dimensions must agree.
+} 
+A>=d
+{??? Error using ==> ge
+Matrix dimensions must agree.
+} 
+b>=d
+
+ans =
+
+     0     1     1     0     0
+
+% retorna los valores con uno si cumplen :P
+% si se quiere comparar vectores forsosamente deben tener la misma dimencion o tamaño
+d(6)=[]%elimina es eelmento del vector
+{???  Index of element to remove exceeds matrix dimensions.
+} 
+d(3)=[]%elimina es eelmento del vector
+
+d =
+
+     1     5     4     3
+
+F=5
+
+F =
+
+     5
+
+b>F
+
+ans =
+
+     0     1     1     0     0
+
+%compara el vector con el unico elemento de F
+H=[1 10]
+
+H =
+
+     1    10
+
+b>H(2)%comparacion de todo b con el segundo elemento de H
+
+ans =
+
+     0     0     0     0     0
+
+ans
+
+ans =
+
+     0     0     0     0     0
+
+clc
+b>H(1)
+
+ans =
+
+     0     1     1     1     1
+
+clc
+% PAÑABRAS CLAVE
+E1=[1 4 8 2 0]
+
+E1 =
+
+     1     4     8     2     0
+
+find(E1>3)
+
+ans =
+
+     2     3
+
+%lo anterior retorna posiciones no elementos del vector
+F4=E1==8%== comparacion
+
+F4 =
+
+     0     0     1     0     0
+
+%F4 es el vector resiltante de la comparacion pero con true o false osea 0 o 1
+clear all,clc
+A=[2 5 8 1 2 3 4 7 6]
+
+A =
+
+     2     5     8     1     2     3     4     7     6
+
+impar=1:2:length(A)
+
+impar =
+
+     1     3     5     7     9
+
+A(impar)
+
+ans =
+
+     2     8     2     4     6
+
+B(impar)=A(2:2:end)
+{???  In an assignment  A(I) = B, the number of elements in B and
+ I must be the same.
+} 
+A=[2 5 8 1 3 4 7 6]
+
+A =
+
+     2     5     8     1     3     4     7     6
+
+impar=1:2:length(A)
+
+impar =
+
+     1     3     5     7
+
+A(impar)
+
+ans =
+
+     2     8     3     7
+
+B(impar)=A(2:2:end)
+
+B =
+
+     5     0     1     0     4     0     6
+
+%este ultimo metio lo q avia en impar en B recorriendo de 2 en 2
+B
+
+B =
+
+     5     0     1     0     4     0     6
+
+B(2:2:end)=88
+
+B =
+
+     5    88     1    88     4    88     6
+
+% este mete 88 en lo q avia cero
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+mod(8,2)==0
+
+ans =
+
+     1
+
+mod(9,2)==0
+
+ans =
+
+     0
+
+rem(8,2)==0
+
+ans =
+
+     1
+
+rem(9,2)==0
+
+ans =
+
+     0
+
+C7=[3 7 2 7 9 3 4 16]
+
+C7 =
+
+     3     7     2     7     9     3     4    16
+
+C8=mod(C7,2)==0
+
+C8 =
+
+     0     0     1     0     0     0     1     1
+
+diary off

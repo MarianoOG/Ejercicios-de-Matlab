@@ -1,0 +1,12 @@
+function idiodo( tf )
+%Calcula la corriente que fluye por un diodo
+id=inline('io*(exp(q*vd./(k*tk))-1)')
+tk=inline('5/9*(tf-32)+273.15')
+
+tf
+for c=tk
+    plot(vd,id(io,k,q,tk(tk),vd))
+    hold on
+end
+hold off
+end

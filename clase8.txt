@@ -1,0 +1,368 @@
+a=[15 0 -2 0 -8; 0 42 -18 -10 0; -2 -18 34 -9 -5; 0 -10 -9 33 -14;]
+
+a =
+
+    15     0    -2     0    -8
+     0    42   -18   -10     0
+    -2   -18    34    -9    -5
+     0   -10    -9    33   -14
+
+a(5,:)=[-8 0 -5 -14 40]
+
+a =
+
+    15     0    -2     0    -8
+     0    42   -18   -10     0
+    -2   -18    34    -9    -5
+     0   -10    -9    33   -14
+    -8     0    -5   -14    40
+
+b=[38 -38 0 20 24]'
+
+b =
+
+    38
+   -38
+     0
+    20
+    24
+
+a(2,2)=43
+
+a =
+
+    15     0    -2     0    -8
+     0    43   -18   -10     0
+    -2   -18    34    -9    -5
+     0   -10    -9    33   -14
+    -8     0    -5   -14    40
+
+x=a\b
+
+x =
+
+    3.7547
+   -0.1040
+    0.9186
+    1.6992
+    2.0605
+
+clear all, clc
+diam(650,200,800)
+{??? Error: <a href="matlab: opentoline('C:\Users\UDI\Documents\MATLAB\diam.m',4,24)">File: diam.m Line: 4 Column: 24</a>
+Unbalanced or unexpected parenthesis or bracket.
+} 
+diam(650,200,800)
+
+d =
+
+   11.4033
+
+
+ans =
+
+   11.4033
+
+uiopen('C:\Users\UDI\Documents\MATLAB\diam.m',1)
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+clc
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+uiopen('C:\Users\UDI\Documents\MATLAB\diam.m',1)
+diam(650,200,800)
+
+d =
+
+   11.4033
+
+
+ans =
+
+   11.4033
+
+d=diam(650,200,800)
+
+d =
+
+   11.4033
+
+
+d =
+
+   11.4033
+
+uiopen('C:\Users\UDI\Documents\MATLAB\diam.m',1)
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+clear all
+clc
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+diam(650,200,800)
+
+ans =
+
+   11.4033
+
+ans
+uiopen('C:\Users\UDI\Documents\MATLAB\diam.m',1)
+diam2
+Dame la potencia en la flecha 650
+
+h =
+
+   650
+
+Dame las revoluciones de la flecha 200
+
+n =
+
+   200
+
+dame el esfuerzo torsional 800;
+
+s =
+
+   800
+
+el diametro requerido es: 
+   11.4033
+
+cm
+diam2
+Dame la potencia en la flecha 650
+
+h =
+
+   650
+
+Dame las revoluciones de la flecha 200
+
+n =
+
+   200
+
+dame el esfuerzo torsional 800
+
+s =
+
+   800
+
+el diametro requerido es: 
+{??? Error using ==> disp
+Too many output arguments.
+
+Error in ==> <a href="matlab: opentoline('C:\Users\UDI\Documents\MATLAB\diam2.m',7,0)">diam2 at 7</a>
+disp(d)&&disp('cm');} 
+diam2
+Dame la potencia en la flecha 650
+
+h =
+
+   650
+
+Dame las revoluciones de la flecha 200
+
+n =
+
+   200
+
+dame el esfuerzo torsional 800
+
+s =
+
+   800
+
+el diametro requerido es: 
+   11.4033
+
+cm
+diam2
+Dame la potencia en la flecha 200
+
+h =
+
+   200
+
+Dame las revoluciones de la flecha 800
+
+n =
+
+   800
+
+dame el esfuerzo torsional 200
+
+s =
+
+   200
+
+el diametro requerido es: 
+{??? Error using ==> disp
+Too many output arguments.
+
+Error in ==> <a href="matlab: opentoline('C:\Users\UDI\Documents\MATLAB\diam2.m',7,0)">diam2 at 7</a>
+disp(d)+disp('cm');} 
+uiopen('C:\Users\UDI\Documents\MATLAB\diam2.m',1)
+diam2
+Dame la potencia en la flecha 650
+
+h =
+
+   650
+
+Dame las revoluciones de la flecha 200
+
+n =
+
+   200
+
+dame el esfuerzo torsional 800
+
+s =
+
+   800
+
+el diametro requerido es: 
+   11.4033
+
+cm
+sqrt([25 16])
+
+ans =
+
+     5     4
+
+impedancia(40,2e-5,120)
+
+z =
+
+   77.4443
+
+
+ans =
+
+   77.4443
+
+uiopen('C:\Users\UDI\Documents\MATLAB\diam2.m',1)
+uiopen('C:\Users\UDI\Documents\MATLAB\impedancia.m',1)
+uiopen('C:\Users\UDI\Documents\MATLAB\diam2.m',1)
+uiopen('C:\Users\UDI\Documents\MATLAB\impedancia.m',1)
+imp
+Dame la resistencia del circuito 40
+
+r =
+
+    40
+
+Dame la capacitancia del circuito 2e-5
+
+c =
+
+  2.0000e-005
+
+dame la frecuencia del circuito 120
+
+f =
+
+   120
+
+el diametro requerido es: 
+   77.4443
+
+ohm
+diary off

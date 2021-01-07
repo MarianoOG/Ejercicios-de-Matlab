@@ -1,0 +1,16 @@
+%EJERCICIO 1:
+esfporint(3000,0,6,12,0,0,15e6,30e6)
+La interferencia diametral es (pulg.): 
+    0.0026
+
+
+ans =
+
+    0.0026
+
+format compact
+esfporint(3000,0,6,12,0,0,15e6,30e6)
+La interferencia diametral es (pulg.): 
+    0.0026
+ans =
+    0.0026

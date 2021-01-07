@@ -1,0 +1,24 @@
+function [ x x1 x2 ] = meca(r,c)
+%Muestra las graficas de la posicion angular, velocidad angular y
+%aceleracion angular.
+TD=550*2*pi/60;
+tf=2*pi/TD;
+y=linspace(0,tf,200);
+th=TD+y;
+
+%operaciones:
+d2=c^2-r^2*sin(th).^2;
+x=r*cos(th)+sqrt(d2);
+x1=-r*th.*sin(th)-(4*r^2*TD*sin(2*th))./(2*sqrt(d2));
+x2=-r*TD^2*cos(th)-(4*r^2*TD^2*cos(2*th).*d2+(r^2*sin(2*th)*TD).^2)./(4*d2^(3/2));
+
+%GRAFICAS:
+subplot(2,2,1)
+plot(y,x),grid,xlabel('Tiempo (s)'),ylabel('Posicion (m)')
+subplot(2,2,1)
+plot(y,x1),grid,xlabel('Tiempo (s)'),ylabel('Velocidad (m/s)')
+subplot(2,2,1)
+plot(y,x2),grid,xlabel('Tiempo (s)'),ylabel('Aceleracion (m/s^2)')
+subplot(2,2,1)
+plot(y,x,y,x1,y,x2),grid
+end

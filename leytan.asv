@@ -1,0 +1,9 @@
+function [ B a b ] = leytan( A,C,c )
+%LEY DE TANGETES
+B=180-A-C
+x1=tand((B-C)/2);
+x2=tand((C+B)/2);
+x3=x1/x2;
+b=c*(x3+1)/(1-x3)
+a=(b*sind(A))/sind(B)
+end

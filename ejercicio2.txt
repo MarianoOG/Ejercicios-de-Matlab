@@ -1,0 +1,643 @@
+A=[1 2 3;4 5 6;7 8 9]
+
+A =
+
+     1     2     3
+     4     5     6
+     7     8     9
+
+B=2.*A
+
+B =
+
+     2     4     6
+     8    10    12
+    14    16    18
+
+C=A.^2
+
+C =
+
+     1     4     9
+    16    25    36
+    49    64    81
+
+D=1./A
+
+D =
+
+    1.0000    0.5000    0.3333
+    0.2500    0.2000    0.1667
+    0.1429    0.1250    0.1111
+
+%EJERCICIO 2:
+B=[1 2 3 4;0 3 -4 5 4 7 8 9;-3 -5 0.7 5]
+{??? Error using ==> vertcat
+CAT arguments dimensions are not consistent.
+} 
+B=[1 2 3 4;0 3 -4 5; 4 7 8 9;-3 -5 0.7 5]
+
+B =
+
+    1.0000    2.0000    3.0000    4.0000
+         0    3.0000   -4.0000    5.0000
+    4.0000    7.0000    8.0000    9.0000
+   -3.0000   -5.0000    0.7000    5.0000
+
+sortrows(A)
+
+ans =
+
+     1     2     3
+     4     5     6
+     7     8     9
+
+sortrows(B)
+
+ans =
+
+   -3.0000   -5.0000    0.7000    5.0000
+         0    3.0000   -4.0000    5.0000
+    1.0000    2.0000    3.0000    4.0000
+    4.0000    7.0000    8.0000    9.0000
+
+%sortrows reacomoda las filas en orden ascendente segun el valor de la primera columna.
+sort(a)
+{??? Undefined function or variable 'a'.
+} 
+sort(A)
+
+ans =
+
+     1     2     3
+     4     5     6
+     7     8     9
+
+sort(B)
+
+ans =
+
+   -3.0000   -5.0000   -4.0000    4.0000
+         0    2.0000    0.7000    5.0000
+    1.0000    3.0000    3.0000    5.0000
+    4.0000    7.0000    8.0000    9.0000
+
+%sort acomoda tosas y cada una de las columnas de menor a mayor, dejando arriba aquellos valores menores.
+sort(B(:,3))
+
+ans =
+
+   -4.0000
+    0.7000
+    3.0000
+    8.0000
+
+%EJERCICIO 3:
+V=[1 3 0.1 8 5 12 13 6 3.9 -9 1.3 -5.4 0.2 13.8]
+
+V =
+
+  Columns 1 through 4
+
+    1.0000    3.0000    0.1000    8.0000
+
+  Columns 5 through 8
+
+    5.0000   12.0000   13.0000    6.0000
+
+  Columns 9 through 12
+
+    3.9000   -9.0000    1.3000   -5.4000
+
+  Columns 13 through 14
+
+    0.2000   13.8000
+
+desv(V)
+
+ans =
+
+   19.5532
+
+norm(v)
+{??? Undefined function or variable 'v'.
+} 
+clear all
+%EJERCICIO 4:
+A=[2 3 -1]; B=[-1 1 2];
+norma(A)
+
+ans =
+
+    3.7417
+
+norma(B)
+
+ans =
+
+    2.4495
+
+clear all
+%EJECICIO 5:
+a=[2 3 -1];b=[-1 1 2];
+angvec(a,b)
+
+ans =
+
+    1.6801
+
+clear all
+%EJECICIO 6:
+r=32;R=50;V=125000;
+h=3*V/(pi*(r+R+r*R))
+
+h =
+
+   70.9668
+
+Al=pi*(r+R)*sqrt((r+R)^2+h^2)
+
+Al =
+
+  2.7937e+004
+
+At=Al+pi*(R^2+r^2)
+
+At =
+
+  3.9008e+004
+
+clear all
+%EJERCICIO 7:
+A=[8 1 6;3 5 7;4 9 2]
+
+A =
+
+     8     1     6
+     3     5     7
+     4     9     2
+
+b=trace(A)
+
+b =
+
+    15
+
+row3=sum(A(3,:))
+
+row3 =
+
+    15
+
+%trace obtiene la traza de la matriz
+%sum hace suma de elementos (fila o columna)...
+%en este caso sumo la tercer fila.
+col23=sum(A(2:3,:))
+
+col23 =
+
+     7    14     9
+
+%suma los elementos de la segunda y tercera fila por columnas
+[L,U]=lu(A)
+
+L =
+
+    1.0000         0         0
+    0.3750    0.5441    1.0000
+    0.5000    1.0000         0
+
+
+U =
+
+    8.0000    1.0000    6.0000
+         0    8.5000   -1.0000
+         0         0    5.2941
+
+L*U
+
+ans =
+
+     8     1     6
+     3     5     7
+     4     9     2
+
+clear all
+%EJERCICIO 8:
+A=[1:3;4:6;10:12;13:15];V1=[2 1 4 5 3];V2=[3 2 1];
+B=A(V1,:)
+{??? Index exceeds matrix dimensions.
+} 
+A=[1:3;4:6;7:9;10:12;13:15];
+B=A(V1,:)
+
+B =
+
+     4     5     6
+     1     2     3
+    10    11    12
+    13    14    15
+     7     8     9
+
+C=A(:,V2)
+
+C =
+
+     3     2     1
+     6     5     4
+     9     8     7
+    12    11    10
+    15    14    13
+
+clear all
+%EJERCICIO 9:
+A=[2 7 9 7;3 1 5 6;8 1 2 5];
+reshape(A,2,6)
+
+ans =
+
+     2     8     1     9     2     6
+     3     7     1     5     7     5
+
+%reordena en una matriz de 2x6 siguiendo el orden de numeracion
+A(:)
+
+ans =
+
+     2
+     3
+     8
+     7
+     1
+     1
+     9
+     5
+     2
+     7
+     6
+     5
+
+flipud(A)
+
+ans =
+
+     8     1     2     5
+     3     1     5     6
+     2     7     9     7
+
+A
+
+A =
+
+     2     7     9     7
+     3     1     5     6
+     8     1     2     5
+
+fliprl(A)
+{??? Undefined function or method 'fliprl' for
+input arguments of type 'double'.
+} 
+fliplr(A)
+
+ans =
+
+     7     9     7     2
+     6     5     1     3
+     5     2     1     8
+
+sum(A')
+
+ans =
+
+    25    15    16
+
+[A;A(1:2,:)]
+
+ans =
+
+     2     7     9     7
+     3     1     5     6
+     8     1     2     5
+     2     7     9     7
+     3     1     5     6
+
+[[A;sum(A)]]
+
+ans =
+
+     2     7     9     7
+     3     1     5     6
+     8     1     2     5
+    13     9    16    18
+
+[sum(A,2);sum(A(:))]
+
+ans =
+
+    25
+    15
+    16
+    56
+
+clear all
+%EJERCICIO 10:
+heron(5,7,9)
+
+ans =
+
+   17.4123
+
+clear all
+%EJERCICIO 11:
+velflu(37.5,42.5)
+
+ans =
+
+    9.9045
+
+clear all
+%EJERCICIO 12:
+A=[170.4105 37.9473 -113.842 -37.9473]
+
+A =
+
+  170.4105   37.9473 -113.8420  -37.9473
+
+A=[170.4105 37.9473 -113.842 -37.9473
+37.9473 69.2176 -37.9473 -12.6491
+-113.842 -37.9473 120.9131 45.0184
+-37.9473 -12.6491 45.0184 19.7202]
+
+A =
+
+  170.4105   37.9473 -113.8420  -37.9473
+   37.9473   69.2176  -37.9473  -12.6491
+ -113.8420  -37.9473  120.9131   45.0184
+  -37.9473  -12.6491   45.0184   19.7202
+
+P=[0;0;0;-1000-(2+0+1+2+6+4+0+1+3+1)]
+
+P =
+
+           0
+           0
+           0
+       -1020
+
+B=[pi -e sqrt(2) -sqrt(3)
+pi^2 e -e^2 3/7
+sqrt(5) -sqrt(6) 1 -sqrt(2)
+pi^3 e^2 -sqrt(7) 1/9]
+{??? Undefined function or variable 'e'.
+} 
+B=[pi -e sqrt(2) -sqrt(3)
+]
+{??? Undefined function or variable 'e'.
+} 
+B=[pi -exp(1) sqrt(2) -sqrt(3)
+pi^2 exp(1) -exp(2) 3/7
+sqrt(5) -sqrt(6) 1 -sqrt(2)
+pi^3 exp(2) -sqrt(7) 1/9]
+
+B =
+
+    3.1416   -2.7183    1.4142   -1.7321
+    9.8696    2.7183   -7.3891    0.4286
+    2.2361   -2.4495    1.0000   -1.4142
+   31.0063    7.3891   -2.6458    0.1111
+
+Q=[sqrt(2+0+1+2+6+4+0+1+3+1;0;pi;sqrt(2)]
+??? Q=[sqrt(2+0+1+2+6+4+0+1+3+1;0;pi;sqrt(2)]
+                               |
+{Error: Unbalanced or unexpected parenthesis
+or bracket.
+} 
+Q=[sqrt(2+0+1+2+6+4+0+1+3+1);0;pi;sqrt(2)]
+
+Q =
+
+    4.4721
+         0
+    3.1416
+    1.4142
+
+C=[1/(7:-1:4);1/(6:-1:3);1/(5:-1:2);1/(4:-1:1)]
+{??? Error using ==> mldivide
+Matrix dimensions must agree.
+} 
+C=[1./(7:-1:4);1./(6:-1:3);1./(5:-1:2);1./(4:-1:1)]
+
+C =
+
+    0.1429    0.1667    0.2000    0.2500
+    0.1667    0.2000    0.2500    0.3333
+    0.2000    0.2500    0.3333    0.5000
+    0.2500    0.3333    0.5000    1.0000
+
+R=[12/pi^2-96/pi^4;8/pi^2-16/pi^3;4/pi^2;2*(2+0+1+2+6+4+0+1+3+1)/pi]
+
+R =
+
+    0.2303
+    0.2945
+    0.4053
+   12.7324
+
+u=A\P
+
+u =
+
+   27.0467
+    9.0155
+  173.4234
+ -389.7961
+
+x=B\Q
+
+x =
+
+   -0.8001
+    3.5809
+   -0.3267
+   -9.9197
+
+a=C\R
+
+a =
+
+  1.0e+003 *
+
+   -1.6938
+    2.9028
+   -1.4499
+    0.1935
+
+%EJERCICIO 13:
+[L,U]=lu(A)
+
+L =
+
+    1.0000         0         0         0
+    0.2227    1.0000         0         0
+   -0.6680   -0.2073    1.0000         0
+   -0.2227   -0.0691    0.4449    1.0000
+
+
+U =
+
+  170.4105   37.9473 -113.8420  -37.9473
+         0   60.7674  -12.5968   -4.1989
+         0         0   42.2502   18.7975
+         0         0         0    2.6168
+
+[L2,U2]=lu(B)
+
+L2 =
+
+    0.1013    1.0000         0         0
+    0.3183   -0.1056    1.0000         0
+    0.0721    0.8602    0.0402    1.0000
+    1.0000         0         0         0
+
+
+U2 =
+
+   31.0063    7.3891   -2.6458    0.1111
+         0   -3.4669    1.6823   -1.7433
+         0         0   -6.3692    0.2090
+         0         0         0    0.0690
+
+[L3,U3]=lu(C)
+
+L3 =
+
+    0.5714    1.0000         0         0
+    0.6667    0.9333    0.5000    1.0000
+    0.8000    0.7000    1.0000         0
+    1.0000         0         0         0
+
+
+U3 =
+
+    0.2500    0.3333    0.5000    1.0000
+         0   -0.0238   -0.0857   -0.3214
+         0         0   -0.0067   -0.0750
+         0         0         0    0.0042
+
+clear all
+%EJERCICIO 14:
+x=pi/6;A=[cos(x) -sin(x);sin(x) cos(x)]
+
+A =
+
+    0.8660   -0.5000
+    0.5000    0.8660
+
+B=A'*A
+
+B =
+
+     1     0
+     0     1
+
+clear all
+%EJERCICIO 15:
+x=1:10;z=[3 1 5 6 8 2 9 4 7 0];
+(x>3)&(x<8)
+
+ans =
+
+  Columns 1 through 7
+
+     0     0     0     1     1     1     1
+
+  Columns 8 through 10
+
+     0     0     0
+
+x*(x>5)
+{??? Error using ==> mtimes
+Inner matrix dimensions must agree.
+} 
+x.*(x>5)
+
+ans =
+
+  Columns 1 through 7
+
+     0     0     0     0     0     6     7
+
+  Columns 8 through 10
+
+     8     9    10
+
+y.*(x<=4)
+{??? Undefined function or variable 'y'.
+} 
+clear z;y=[3 1 5 6 8 2 9 4 7 0];
+y.*(x<=4)
+
+ans =
+
+  Columns 1 through 7
+
+     3     1     5     6     0     0     0
+
+  Columns 8 through 10
+
+     0     0     0
+
+x.*((x<2)|(x>=8))
+
+ans =
+
+  Columns 1 through 7
+
+     1     0     0     0     0     0     0
+
+  Columns 8 through 10
+
+     8     9    10
+
+y.*((x<2)|(x>=8))
+
+ans =
+
+  Columns 1 through 7
+
+     3     0     0     0     0     0     0
+
+  Columns 8 through 10
+
+     4     7     0
+
+x.*(y<0)
+
+ans =
+
+  Columns 1 through 7
+
+     0     0     0     0     0     0     0
+
+  Columns 8 through 10
+
+     0     0     0
+
+clear all
+%EJERCICIO 16:
+R=(1/0.8+1/0.2)^(-1)+0.5
+
+R =
+
+    0.6600
+
+clear all
+%EJERCICIO 17:
+L=1/(4*pi^2*(17e3)^2*3.5e6)
+
+L =
+
+  2.5042e-017
+
+clear all
+diary off
